@@ -6,18 +6,25 @@
 //  Copyright (c) 2014 Galaxy. All rights reserved.
 //
 
-#import "GSTViewController.h"
+#import "GSTMainViewController.h"
 
-@interface GSTViewController ()
+@interface GSTMainViewController ()
 
 @end
 
-@implementation GSTViewController
+@implementation GSTMainViewController
 
-- (void)viewDidLoad
-{
+- (id)initWithCoder:(NSCoder *)aDecoder {
+    self = [super initWithCoder:aDecoder];
+    if (self) {
+        self.title = @"Galaxy Specimen Tracking";
+    }
+    return self;
+}
+
+- (void)viewDidLoad {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+	
 }
 
 - (void)didReceiveMemoryWarning

@@ -14,13 +14,17 @@
 		ED8AAAA8189E9DAE00697A0F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = ED8AAAA7189E9DAE00697A0F /* main.m */; };
 		ED8AAAAC189E9DAE00697A0F /* GSTAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = ED8AAAAB189E9DAE00697A0F /* GSTAppDelegate.m */; };
 		ED8AAAAF189E9DAE00697A0F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED8AAAAD189E9DAE00697A0F /* Main.storyboard */; };
-		ED8AAAB2189E9DAE00697A0F /* GSTViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED8AAAB1189E9DAE00697A0F /* GSTViewController.m */; };
+		ED8AAAB2189E9DAE00697A0F /* GSTMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED8AAAB1189E9DAE00697A0F /* GSTMainViewController.m */; };
 		ED8AAAB4189E9DAE00697A0F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED8AAAB3189E9DAE00697A0F /* Images.xcassets */; };
 		ED8AAABB189E9DAE00697A0F /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED8AAABA189E9DAE00697A0F /* XCTest.framework */; };
 		ED8AAABC189E9DAE00697A0F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED8AAA9B189E9DAE00697A0F /* Foundation.framework */; };
 		ED8AAABD189E9DAE00697A0F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED8AAA9F189E9DAE00697A0F /* UIKit.framework */; };
 		ED8AAAC5189E9DAE00697A0F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = ED8AAAC3189E9DAE00697A0F /* InfoPlist.strings */; };
 		ED8AAAC7189E9DAE00697A0F /* sampletrackerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = ED8AAAC6189E9DAE00697A0F /* sampletrackerTests.m */; };
+		ED8AAAD6189EA81300697A0F /* GSTSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED8AAAD5189EA81300697A0F /* GSTSettingsViewController.m */; };
+		ED8AAAD9189EAA8D00697A0F /* GSTLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = ED8AAAD8189EAA8D00697A0F /* GSTLocation.m */; };
+		ED8AAADC189EAE4500697A0F /* GSTLocationPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED8AAADB189EAE4500697A0F /* GSTLocationPickerViewController.m */; };
+		ED8AAAE0189EB9E100697A0F /* GSTNewSpecimenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED8AAADF189EB9E100697A0F /* GSTNewSpecimenViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,14 +49,23 @@
 		ED8AAAAA189E9DAE00697A0F /* GSTAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GSTAppDelegate.h; sourceTree = "<group>"; };
 		ED8AAAAB189E9DAE00697A0F /* GSTAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GSTAppDelegate.m; sourceTree = "<group>"; };
 		ED8AAAAE189E9DAE00697A0F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		ED8AAAB0189E9DAE00697A0F /* GSTViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GSTViewController.h; sourceTree = "<group>"; };
-		ED8AAAB1189E9DAE00697A0F /* GSTViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GSTViewController.m; sourceTree = "<group>"; };
+		ED8AAAB0189E9DAE00697A0F /* GSTMainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GSTMainViewController.h; sourceTree = "<group>"; };
+		ED8AAAB1189E9DAE00697A0F /* GSTMainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GSTMainViewController.m; sourceTree = "<group>"; };
 		ED8AAAB3189E9DAE00697A0F /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		ED8AAAB9189E9DAE00697A0F /* sampletrackerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = sampletrackerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED8AAABA189E9DAE00697A0F /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		ED8AAAC2189E9DAE00697A0F /* sampletrackerTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "sampletrackerTests-Info.plist"; sourceTree = "<group>"; };
 		ED8AAAC4189E9DAE00697A0F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		ED8AAAC6189E9DAE00697A0F /* sampletrackerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = sampletrackerTests.m; sourceTree = "<group>"; };
+		ED8AAAD4189EA81300697A0F /* GSTSettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSTSettingsViewController.h; sourceTree = "<group>"; };
+		ED8AAAD5189EA81300697A0F /* GSTSettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSTSettingsViewController.m; sourceTree = "<group>"; };
+		ED8AAAD7189EAA8D00697A0F /* GSTLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSTLocation.h; sourceTree = "<group>"; };
+		ED8AAAD8189EAA8D00697A0F /* GSTLocation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSTLocation.m; sourceTree = "<group>"; };
+		ED8AAADA189EAE4500697A0F /* GSTLocationPickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSTLocationPickerViewController.h; sourceTree = "<group>"; };
+		ED8AAADB189EAE4500697A0F /* GSTLocationPickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSTLocationPickerViewController.m; sourceTree = "<group>"; };
+		ED8AAADD189EAE9000697A0F /* GSTLocationPickerDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GSTLocationPickerDelegate.h; sourceTree = "<group>"; };
+		ED8AAADE189EB9E100697A0F /* GSTNewSpecimenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSTNewSpecimenViewController.h; sourceTree = "<group>"; };
+		ED8AAADF189EB9E100697A0F /* GSTNewSpecimenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSTNewSpecimenViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,12 +125,12 @@
 		ED8AAAA1189E9DAE00697A0F /* sampletracker */ = {
 			isa = PBXGroup;
 			children = (
+				ED8AAAD2189E9F2D00697A0F /* View */,
+				ED8AAAD1189E9F2800697A0F /* Model */,
+				ED8AAAD3189E9F3000697A0F /* Controller */,
 				ED8AAAAA189E9DAE00697A0F /* GSTAppDelegate.h */,
 				ED8AAAAB189E9DAE00697A0F /* GSTAppDelegate.m */,
-				ED8AAAAD189E9DAE00697A0F /* Main.storyboard */,
-				ED8AAAB0189E9DAE00697A0F /* GSTViewController.h */,
-				ED8AAAB1189E9DAE00697A0F /* GSTViewController.m */,
-				ED8AAAB3189E9DAE00697A0F /* Images.xcassets */,
+				ED8AAAD0189E9F1600697A0F /* Resources */,
 				ED8AAAA2189E9DAE00697A0F /* Supporting Files */,
 			);
 			path = sampletracker;
@@ -150,6 +163,47 @@
 				ED8AAAC3189E9DAE00697A0F /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		ED8AAAD0189E9F1600697A0F /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				ED8AAAAD189E9DAE00697A0F /* Main.storyboard */,
+				ED8AAAB3189E9DAE00697A0F /* Images.xcassets */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		ED8AAAD1189E9F2800697A0F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				ED8AAAD7189EAA8D00697A0F /* GSTLocation.h */,
+				ED8AAAD8189EAA8D00697A0F /* GSTLocation.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		ED8AAAD2189E9F2D00697A0F /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		ED8AAAD3189E9F3000697A0F /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				ED8AAADD189EAE9000697A0F /* GSTLocationPickerDelegate.h */,
+				ED8AAADA189EAE4500697A0F /* GSTLocationPickerViewController.h */,
+				ED8AAADB189EAE4500697A0F /* GSTLocationPickerViewController.m */,
+				ED8AAAB0189E9DAE00697A0F /* GSTMainViewController.h */,
+				ED8AAAB1189E9DAE00697A0F /* GSTMainViewController.m */,
+				ED8AAAD4189EA81300697A0F /* GSTSettingsViewController.h */,
+				ED8AAAD5189EA81300697A0F /* GSTSettingsViewController.m */,
+				ED8AAADE189EB9E100697A0F /* GSTNewSpecimenViewController.h */,
+				ED8AAADF189EB9E100697A0F /* GSTNewSpecimenViewController.m */,
+			);
+			name = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -250,9 +304,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ED8AAAB2189E9DAE00697A0F /* GSTViewController.m in Sources */,
+				ED8AAAD6189EA81300697A0F /* GSTSettingsViewController.m in Sources */,
+				ED8AAAB2189E9DAE00697A0F /* GSTMainViewController.m in Sources */,
 				ED8AAAA8189E9DAE00697A0F /* main.m in Sources */,
 				ED8AAAAC189E9DAE00697A0F /* GSTAppDelegate.m in Sources */,
+				ED8AAADC189EAE4500697A0F /* GSTLocationPickerViewController.m in Sources */,
+				ED8AAAD9189EAA8D00697A0F /* GSTLocation.m in Sources */,
+				ED8AAAE0189EB9E100697A0F /* GSTNewSpecimenViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -461,6 +519,7 @@
 				ED8AAACC189E9DAE00697A0F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		ED8AAACD189E9DAE00697A0F /* Build configuration list for PBXNativeTarget "sampletrackerTests" */ = {
 			isa = XCConfigurationList;
@@ -469,6 +528,7 @@
 				ED8AAACF189E9DAE00697A0F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -14,3 +14,7 @@
     #import <UIKit/UIKit.h>
     #import <Foundation/Foundation.h>
 #endif
+
+#define SETTINGS_API_KEY @"kSettingsApiKey"
+#define SETTINGS_PROJECT_ID @"kProjectId"
+#define SETTINGS_LAST_LOCATION @"kLastLocation"

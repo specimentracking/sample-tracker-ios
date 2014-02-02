@@ -1,5 +1,5 @@
 //
-//  GSTViewController.h
+//  GSTSettingsViewController.h
 //  sampletracker
 //
 //  Created by Ondřej Fabián on 02/02/2014.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface GSTViewController : UIViewController
+@interface GSTSettingsViewController : UIViewController <UITextFieldDelegate>
 
 @end
