@@ -37,7 +37,7 @@
         [self.spotPicker selectRow:[self.location.spot characterAtIndex:0]-'A' inComponent:0 animated:NO];
         [self.spotPicker selectRow:[self.location.spot characterAtIndex:1]-'1' inComponent:1 animated:NO];
     } else {
-        self.location = [[GSTLocation alloc] init];
+        self.location = [[GSTSpecimenLocationModel alloc] init];
         self.location.spot = @"A1";
         self.spotTextField.text = [NSString stringWithFormat:@"A-1"];
         [self.spotPicker selectRow:0 inComponent:0 animated:NO];

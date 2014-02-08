@@ -8,7 +8,7 @@
 
 #import "GSTNewSpecimenViewController.h"
 #import "GSTLocationPickerViewController.h"
-#import "GSTLocation.h"
+#import "GSTSpecimenLocationModel.h"
 
 @interface GSTNewSpecimenViewController ()
 
@@ -22,7 +22,7 @@
     [super viewDidLoad];
     NSString *locationIdentifier = [[NSUserDefaults standardUserDefaults] objectForKey:SETTINGS_LAST_LOCATION];
     if (locationIdentifier) {
-        GSTLocation *location = [[GSTLocation alloc] initWithIdentifier:locationIdentifier];
+        GSTSpecimenLocationModel *location = [[GSTSpecimenLocationModel alloc] initWithIdentifier:locationIdentifier];
         self.locationValueLabel.text = location.description;
     }
 }
@@ -33,7 +33,7 @@
         pickerController.delegate = self;
         NSString *locationIdentifier = [[NSUserDefaults standardUserDefaults] objectForKey:SETTINGS_LAST_LOCATION];
         if (locationIdentifier) {
-            GSTLocation *location = [[GSTLocation alloc] initWithIdentifier:locationIdentifier];
+            GSTSpecimenLocationModel *location = [[GSTSpecimenLocationModel alloc] initWithIdentifier:locationIdentifier];
             pickerController.location = location;
         }
     }
@@ -41,7 +41,7 @@
 
 #pragma mark - Location picker
 
-- (void)locationPicker:(GSTLocationPickerViewController *)picker didPickLocation:(GSTLocation *)location {
+- (void)locationPicker:(GSTLocationPickerViewController *)picker didPickLocation:(GSTSpecimenLocationModel *)location {
     [[NSUserDefaults standardUserDefaults] setObject:location.locationIdentifier forKey:SETTINGS_LAST_LOCATION];
     self.locationValueLabel.text = location.description;
     [self.navigationController popViewControllerAnimated:YES];

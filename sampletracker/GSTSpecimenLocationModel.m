@@ -6,9 +6,9 @@
 //  Copyright (c) 2014 Galaxy. All rights reserved.
 //
 
-#import "GSTLocation.h"
+#import "GSTSpecimenLocationModel.h"
 
-@implementation GSTLocation
+@implementation GSTSpecimenLocationModel
 
 - (instancetype)initWithIdentifier:(NSString *)locationIdentifier {
     self = [super init];

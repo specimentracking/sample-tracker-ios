@@ -7,12 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "GSTLocation.h"
+#import "GSTSpecimenLocationModel.h"
 #import "GSTLocationPickerDelegate.h"
 
 @interface GSTLocationPickerViewController : UIViewController <UITextFieldDelegate, UIPickerViewDataSource, UIPickerViewDelegate>
 
-@property (nonatomic, retain) GSTLocation *location;
+@property (nonatomic, retain) GSTSpecimenLocationModel *location;
 
 @property (nonatomic, weak) id<GSTLocationPickerDelegate> delegate;
 

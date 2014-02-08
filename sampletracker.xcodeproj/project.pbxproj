@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		ED74D78318A67E2E005E612E /* GSTRESTResource.m in Sources */ = {isa = PBXBuildFile; fileRef = ED74D78118A67E2E005E612E /* GSTRESTResource.m */; };
+		ED74D79718A68391005E612E /* GSTActivityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = ED74D79618A68391005E612E /* GSTActivityManager.m */; };
+		ED74D79D18A68C68005E612E /* GSTSpecimensResource.m in Sources */ = {isa = PBXBuildFile; fileRef = ED74D79C18A68C68005E612E /* GSTSpecimensResource.m */; };
+		ED74D7A018A68D93005E612E /* GSTSpecimenModel.m in Sources */ = {isa = PBXBuildFile; fileRef = ED74D79F18A68D93005E612E /* GSTSpecimenModel.m */; };
+		ED74D7A318A6963B005E612E /* GSTSpecimenTypeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = ED74D7A218A6963B005E612E /* GSTSpecimenTypeModel.m */; };
 		ED8AAA9C189E9DAE00697A0F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED8AAA9B189E9DAE00697A0F /* Foundation.framework */; };
 		ED8AAA9E189E9DAE00697A0F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED8AAA9D189E9DAE00697A0F /* CoreGraphics.framework */; };
 		ED8AAAA0189E9DAE00697A0F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED8AAA9F189E9DAE00697A0F /* UIKit.framework */; };
@@ -16,28 +21,24 @@
 		ED8AAAAF189E9DAE00697A0F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED8AAAAD189E9DAE00697A0F /* Main.storyboard */; };
 		ED8AAAB2189E9DAE00697A0F /* GSTMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED8AAAB1189E9DAE00697A0F /* GSTMainViewController.m */; };
 		ED8AAAB4189E9DAE00697A0F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED8AAAB3189E9DAE00697A0F /* Images.xcassets */; };
-		ED8AAABB189E9DAE00697A0F /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED8AAABA189E9DAE00697A0F /* XCTest.framework */; };
-		ED8AAABC189E9DAE00697A0F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED8AAA9B189E9DAE00697A0F /* Foundation.framework */; };
-		ED8AAABD189E9DAE00697A0F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED8AAA9F189E9DAE00697A0F /* UIKit.framework */; };
-		ED8AAAC5189E9DAE00697A0F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = ED8AAAC3189E9DAE00697A0F /* InfoPlist.strings */; };
-		ED8AAAC7189E9DAE00697A0F /* sampletrackerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = ED8AAAC6189E9DAE00697A0F /* sampletrackerTests.m */; };
 		ED8AAAD6189EA81300697A0F /* GSTSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED8AAAD5189EA81300697A0F /* GSTSettingsViewController.m */; };
-		ED8AAAD9189EAA8D00697A0F /* GSTLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = ED8AAAD8189EAA8D00697A0F /* GSTLocation.m */; };
+		ED8AAAD9189EAA8D00697A0F /* GSTSpecimenLocationModel.m in Sources */ = {isa = PBXBuildFile; fileRef = ED8AAAD8189EAA8D00697A0F /* GSTSpecimenLocationModel.m */; };
 		ED8AAADC189EAE4500697A0F /* GSTLocationPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED8AAADB189EAE4500697A0F /* GSTLocationPickerViewController.m */; };
 		ED8AAAE0189EB9E100697A0F /* GSTNewSpecimenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED8AAADF189EB9E100697A0F /* GSTNewSpecimenViewController.m */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		ED8AAABE189E9DAE00697A0F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = ED8AAA90189E9DAE00697A0F /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = ED8AAA97189E9DAE00697A0F;
-			remoteInfo = sampletracker;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
+		ED74D78018A67E2E005E612E /* GSTRESTResource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSTRESTResource.h; sourceTree = "<group>"; };
+		ED74D78118A67E2E005E612E /* GSTRESTResource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSTRESTResource.m; sourceTree = "<group>"; };
+		ED74D78218A67E2E005E612E /* GSTRESTResourceDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSTRESTResourceDelegate.h; sourceTree = "<group>"; };
+		ED74D79518A68391005E612E /* GSTActivityManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = GSTActivityManager.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		ED74D79618A68391005E612E /* GSTActivityManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = GSTActivityManager.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		ED74D79B18A68C68005E612E /* GSTSpecimensResource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GSTSpecimensResource.h; path = ../GSTSpecimensResource.h; sourceTree = "<group>"; };
+		ED74D79C18A68C68005E612E /* GSTSpecimensResource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GSTSpecimensResource.m; path = ../GSTSpecimensResource.m; sourceTree = "<group>"; };
+		ED74D79E18A68D93005E612E /* GSTSpecimenModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSTSpecimenModel.h; sourceTree = "<group>"; };
+		ED74D79F18A68D93005E612E /* GSTSpecimenModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSTSpecimenModel.m; sourceTree = "<group>"; };
+		ED74D7A118A6963B005E612E /* GSTSpecimenTypeModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSTSpecimenTypeModel.h; sourceTree = "<group>"; };
+		ED74D7A218A6963B005E612E /* GSTSpecimenTypeModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSTSpecimenTypeModel.m; sourceTree = "<group>"; };
 		ED8AAA98189E9DAE00697A0F /* sampletracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = sampletracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED8AAA9B189E9DAE00697A0F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		ED8AAA9D189E9DAE00697A0F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -52,15 +53,14 @@
 		ED8AAAB0189E9DAE00697A0F /* GSTMainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GSTMainViewController.h; sourceTree = "<group>"; };
 		ED8AAAB1189E9DAE00697A0F /* GSTMainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GSTMainViewController.m; sourceTree = "<group>"; };
 		ED8AAAB3189E9DAE00697A0F /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		ED8AAAB9189E9DAE00697A0F /* sampletrackerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = sampletrackerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED8AAABA189E9DAE00697A0F /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		ED8AAAC2189E9DAE00697A0F /* sampletrackerTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "sampletrackerTests-Info.plist"; sourceTree = "<group>"; };
 		ED8AAAC4189E9DAE00697A0F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		ED8AAAC6189E9DAE00697A0F /* sampletrackerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = sampletrackerTests.m; sourceTree = "<group>"; };
 		ED8AAAD4189EA81300697A0F /* GSTSettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSTSettingsViewController.h; sourceTree = "<group>"; };
 		ED8AAAD5189EA81300697A0F /* GSTSettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSTSettingsViewController.m; sourceTree = "<group>"; };
-		ED8AAAD7189EAA8D00697A0F /* GSTLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSTLocation.h; sourceTree = "<group>"; };
-		ED8AAAD8189EAA8D00697A0F /* GSTLocation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSTLocation.m; sourceTree = "<group>"; };
+		ED8AAAD7189EAA8D00697A0F /* GSTSpecimenLocationModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSTSpecimenLocationModel.h; sourceTree = "<group>"; };
+		ED8AAAD8189EAA8D00697A0F /* GSTSpecimenLocationModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSTSpecimenLocationModel.m; sourceTree = "<group>"; };
 		ED8AAADA189EAE4500697A0F /* GSTLocationPickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSTLocationPickerViewController.h; sourceTree = "<group>"; };
 		ED8AAADB189EAE4500697A0F /* GSTLocationPickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSTLocationPickerViewController.m; sourceTree = "<group>"; };
 		ED8AAADD189EAE9000697A0F /* GSTLocationPickerDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GSTLocationPickerDelegate.h; sourceTree = "<group>"; };
@@ -79,19 +79,30 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		ED8AAAB6189E9DAE00697A0F /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				ED8AAABB189E9DAE00697A0F /* XCTest.framework in Frameworks */,
-				ED8AAABD189E9DAE00697A0F /* UIKit.framework in Frameworks */,
-				ED8AAABC189E9DAE00697A0F /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		ED74D77E18A67E0A005E612E /* REST */ = {
+			isa = PBXGroup;
+			children = (
+				ED74D79B18A68C68005E612E /* GSTSpecimensResource.h */,
+				ED74D79C18A68C68005E612E /* GSTSpecimensResource.m */,
+				ED74D78018A67E2E005E612E /* GSTRESTResource.h */,
+				ED74D78118A67E2E005E612E /* GSTRESTResource.m */,
+				ED74D78218A67E2E005E612E /* GSTRESTResourceDelegate.h */,
+			);
+			name = REST;
+			sourceTree = "<group>";
+		};
+		ED74D79418A68384005E612E /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				ED74D79518A68391005E612E /* GSTActivityManager.h */,
+				ED74D79618A68391005E612E /* GSTActivityManager.m */,
+			);
+			name = Manager;
+			sourceTree = "<group>";
+		};
 		ED8AAA8F189E9DAE00697A0F = {
 			isa = PBXGroup;
 			children = (
@@ -106,7 +117,6 @@
 			isa = PBXGroup;
 			children = (
 				ED8AAA98189E9DAE00697A0F /* sampletracker.app */,
-				ED8AAAB9189E9DAE00697A0F /* sampletrackerTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -125,6 +135,8 @@
 		ED8AAAA1189E9DAE00697A0F /* sampletracker */ = {
 			isa = PBXGroup;
 			children = (
+				ED74D79418A68384005E612E /* Manager */,
+				ED74D77E18A67E0A005E612E /* REST */,
 				ED8AAAD2189E9F2D00697A0F /* View */,
 				ED8AAAD1189E9F2800697A0F /* Model */,
 				ED8AAAD3189E9F3000697A0F /* Controller */,
@@ -177,8 +189,12 @@
 		ED8AAAD1189E9F2800697A0F /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				ED8AAAD7189EAA8D00697A0F /* GSTLocation.h */,
-				ED8AAAD8189EAA8D00697A0F /* GSTLocation.m */,
+				ED74D7A118A6963B005E612E /* GSTSpecimenTypeModel.h */,
+				ED74D7A218A6963B005E612E /* GSTSpecimenTypeModel.m */,
+				ED8AAAD7189EAA8D00697A0F /* GSTSpecimenLocationModel.h */,
+				ED8AAAD8189EAA8D00697A0F /* GSTSpecimenLocationModel.m */,
+				ED74D79E18A68D93005E612E /* GSTSpecimenModel.h */,
+				ED74D79F18A68D93005E612E /* GSTSpecimenModel.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -226,24 +242,6 @@
 			productReference = ED8AAA98189E9DAE00697A0F /* sampletracker.app */;
 			productType = "com.apple.product-type.application";
 		};
-		ED8AAAB8189E9DAE00697A0F /* sampletrackerTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = ED8AAACD189E9DAE00697A0F /* Build configuration list for PBXNativeTarget "sampletrackerTests" */;
-			buildPhases = (
-				ED8AAAB5189E9DAE00697A0F /* Sources */,
-				ED8AAAB6189E9DAE00697A0F /* Frameworks */,
-				ED8AAAB7189E9DAE00697A0F /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				ED8AAABF189E9DAE00697A0F /* PBXTargetDependency */,
-			);
-			name = sampletrackerTests;
-			productName = sampletrackerTests;
-			productReference = ED8AAAB9189E9DAE00697A0F /* sampletrackerTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -253,11 +251,6 @@
 				CLASSPREFIX = GST;
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = Galaxy;
-				TargetAttributes = {
-					ED8AAAB8189E9DAE00697A0F = {
-						TestTargetID = ED8AAA97189E9DAE00697A0F;
-					};
-				};
 			};
 			buildConfigurationList = ED8AAA93189E9DAE00697A0F /* Build configuration list for PBXProject "sampletracker" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -273,7 +266,6 @@
 			projectRoot = "";
 			targets = (
 				ED8AAA97189E9DAE00697A0F /* sampletracker */,
-				ED8AAAB8189E9DAE00697A0F /* sampletrackerTests */,
 			);
 		};
 /* End PBXProject section */
@@ -289,14 +281,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		ED8AAAB7189E9DAE00697A0F /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				ED8AAAC5189E9DAE00697A0F /* InfoPlist.strings in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -307,30 +291,19 @@
 				ED8AAAD6189EA81300697A0F /* GSTSettingsViewController.m in Sources */,
 				ED8AAAB2189E9DAE00697A0F /* GSTMainViewController.m in Sources */,
 				ED8AAAA8189E9DAE00697A0F /* main.m in Sources */,
+				ED74D79D18A68C68005E612E /* GSTSpecimensResource.m in Sources */,
+				ED74D79718A68391005E612E /* GSTActivityManager.m in Sources */,
 				ED8AAAAC189E9DAE00697A0F /* GSTAppDelegate.m in Sources */,
 				ED8AAADC189EAE4500697A0F /* GSTLocationPickerViewController.m in Sources */,
-				ED8AAAD9189EAA8D00697A0F /* GSTLocation.m in Sources */,
+				ED74D7A018A68D93005E612E /* GSTSpecimenModel.m in Sources */,
+				ED74D7A318A6963B005E612E /* GSTSpecimenTypeModel.m in Sources */,
+				ED8AAAD9189EAA8D00697A0F /* GSTSpecimenLocationModel.m in Sources */,
 				ED8AAAE0189EB9E100697A0F /* GSTNewSpecimenViewController.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		ED8AAAB5189E9DAE00697A0F /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				ED8AAAC7189E9DAE00697A0F /* sampletrackerTests.m in Sources */,
+				ED74D78318A67E2E005E612E /* GSTRESTResource.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		ED8AAABF189E9DAE00697A0F /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = ED8AAA97189E9DAE00697A0F /* sampletracker */;
-			targetProxy = ED8AAABE189E9DAE00697A0F /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		ED8AAAA4189E9DAE00697A0F /* InfoPlist.strings */ = {
@@ -360,7 +333,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		ED8AAAC8189E9DAE00697A0F /* Debug */ = {
+		ED74D78818A6801D005E612E /* Test-Dev */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -397,9 +370,82 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 			};
-			name = Debug;
+			name = "Test-Dev";
 		};
-		ED8AAAC9189E9DAE00697A0F /* Release */ = {
+		ED74D78918A6801D005E612E /* Test-Dev */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "sampletracker/sampletracker-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					ENV_TEST,
+				);
+				INFOPLIST_FILE = "sampletracker/sampletracker-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = "Test-Dev";
+		};
+		ED74D78B18A68026005E612E /* Prod-Dev */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = "Prod-Dev";
+		};
+		ED74D78C18A68026005E612E /* Prod-Dev */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "sampletracker/sampletracker-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					ENV_PROD,
+				);
+				INFOPLIST_FILE = "sampletracker/sampletracker-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = "Prod-Dev";
+		};
+		ED74D78E18A68032005E612E /* Test-Dist */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -430,75 +476,171 @@
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
-			name = Release;
+			name = "Test-Dist";
 		};
-		ED8AAACB189E9DAE00697A0F /* Debug */ = {
+		ED74D78F18A68032005E612E /* Test-Dist */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "sampletracker/sampletracker-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = ENV_TEST;
 				INFOPLIST_FILE = "sampletracker/sampletracker-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
-			name = Debug;
+			name = "Test-Dist";
 		};
-		ED8AAACC189E9DAE00697A0F /* Release */ = {
+		ED74D79118A68039005E612E /* Prod-Dist */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "sampletracker/sampletracker-Prefix.pch";
-				INFOPLIST_FILE = "sampletracker/sampletracker-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				WRAPPER_EXTENSION = app;
-			};
-			name = Release;
-		};
-		ED8AAACE189E9DAE00697A0F /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/sampletracker.app/sampletracker";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-				);
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = "Prod-Dist";
+		};
+		ED74D79218A68039005E612E /* Prod-Dist */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "sampletracker/sampletracker-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = ENV_PROD;
+				INFOPLIST_FILE = "sampletracker/sampletracker-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = "Prod-Dist";
+		};
+		ED8AAAC8189E9DAE00697A0F /* Mock-Dev */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = "sampletrackerTests/sampletrackerTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = xctest;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
 			};
-			name = Debug;
+			name = "Mock-Dev";
 		};
-		ED8AAACF189E9DAE00697A0F /* Release */ = {
+		ED8AAAC9189E9DAE00697A0F /* Mock-Dist */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/sampletracker.app/sampletracker";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-				);
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = "Mock-Dist";
+		};
+		ED8AAACB189E9DAE00697A0F /* Mock-Dev */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "sampletracker/sampletracker-Prefix.pch";
-				INFOPLIST_FILE = "sampletrackerTests/sampletrackerTests-Info.plist";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					ENV_MOCK,
+				);
+				INFOPLIST_FILE = "sampletracker/sampletracker-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = xctest;
+				WRAPPER_EXTENSION = app;
 			};
-			name = Release;
+			name = "Mock-Dev";
+		};
+		ED8AAACC189E9DAE00697A0F /* Mock-Dist */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "sampletracker/sampletracker-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = ENV_MOCK;
+				INFOPLIST_FILE = "sampletracker/sampletracker-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = "Mock-Dist";
 		};
 /* End XCBuildConfiguration section */
 
@@ -506,29 +648,28 @@
 		ED8AAA93189E9DAE00697A0F /* Build configuration list for PBXProject "sampletracker" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				ED8AAAC8189E9DAE00697A0F /* Debug */,
-				ED8AAAC9189E9DAE00697A0F /* Release */,
+				ED8AAAC8189E9DAE00697A0F /* Mock-Dev */,
+				ED74D78818A6801D005E612E /* Test-Dev */,
+				ED74D78B18A68026005E612E /* Prod-Dev */,
+				ED8AAAC9189E9DAE00697A0F /* Mock-Dist */,
+				ED74D78E18A68032005E612E /* Test-Dist */,
+				ED74D79118A68039005E612E /* Prod-Dist */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = "Mock-Dist";
 		};
 		ED8AAACA189E9DAE00697A0F /* Build configuration list for PBXNativeTarget "sampletracker" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				ED8AAACB189E9DAE00697A0F /* Debug */,
-				ED8AAACC189E9DAE00697A0F /* Release */,
+				ED8AAACB189E9DAE00697A0F /* Mock-Dev */,
+				ED74D78918A6801D005E612E /* Test-Dev */,
+				ED74D78C18A68026005E612E /* Prod-Dev */,
+				ED8AAACC189E9DAE00697A0F /* Mock-Dist */,
+				ED74D78F18A68032005E612E /* Test-Dist */,
+				ED74D79218A68039005E612E /* Prod-Dist */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		ED8AAACD189E9DAE00697A0F /* Build configuration list for PBXNativeTarget "sampletrackerTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				ED8AAACE189E9DAE00697A0F /* Debug */,
-				ED8AAACF189E9DAE00697A0F /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = "Mock-Dist";
 		};
 /* End XCConfigurationList section */
 	};

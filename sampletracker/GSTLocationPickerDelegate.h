@@ -8,10 +8,10 @@
 
 #import <Foundation/Foundation.h>
 
-@class GSTLocationPickerViewController, GSTLocation;
+@class GSTLocationPickerViewController, GSTSpecimenLocationModel;
 
 @protocol GSTLocationPickerDelegate <NSObject>
 
-- (void)locationPicker:(GSTLocationPickerViewController *)picker didPickLocation:(GSTLocation *)location;
+- (void)locationPicker:(GSTLocationPickerViewController *)picker didPickLocation:(GSTSpecimenLocationModel *)location;
 
 @end

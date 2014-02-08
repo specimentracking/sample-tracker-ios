@@ -7,8 +7,11 @@
 //
 
 #import "GSTMainViewController.h"
+#import "GSTSpecimensResource.h"
 
 @interface GSTMainViewController ()
+
+@property (nonatomic, strong) GSTSpecimensResource *specimensResource;
 
 @end
 
@@ -27,10 +30,26 @@
 	
 }
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+#pragma mark - Actions
+
+- (IBAction)checkBarcode:(id)sender {
+    self.specimensResource = [[GSTSpecimensResource alloc] initWithDelegate:self];
+    [self.specimensResource startCheckSpecimen:@"123456"];
 }
+
+#pragma mark - REST Delegate
+
+- (void)request:(GSTRESTResource *)request didReceiveHeader:(NSDictionary *)header statusCode:(NSInteger)statusCode {
+    
+}
+
+- (void)request:(GSTRESTResource *)request didFailLoadingWithError:(NSError *)error {
+    
+}
+
+- (void)request:(GSTRESTResource *)request didFinishWithData:(id)resourceData {
+    
+}
+
 
 @end
