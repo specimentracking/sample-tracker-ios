@@ -10,6 +10,15 @@
 
 @interface GSTSpecimenTypeModel : NSObject
 
-#warning TODO implement the same way as location
+@property (nonatomic, retain) NSString *type1;
+@property (nonatomic, readonly) NSArray *type1Map;
+@property (nonatomic, retain) NSString *type2;
+@property (nonatomic, readonly) NSArray *type2Map;
+@property (nonatomic, retain) NSString *type3;
+@property (nonatomic, readonly) NSArray *type3Map;
+
+- (instancetype)initWithIdentifier:(NSString *)locationIdentifier;
+- (NSString *)locationIdentifier;
+
 
 @end

@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		06B6575518A790C400FE9A87 /* GSTSpecimensResource.m in Sources */ = {isa = PBXBuildFile; fileRef = 06B6575418A790C400FE9A87 /* GSTSpecimensResource.m */; };
 		ED74D78318A67E2E005E612E /* GSTRESTResource.m in Sources */ = {isa = PBXBuildFile; fileRef = ED74D78118A67E2E005E612E /* GSTRESTResource.m */; };
 		ED74D79718A68391005E612E /* GSTActivityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = ED74D79618A68391005E612E /* GSTActivityManager.m */; };
-		ED74D79D18A68C68005E612E /* GSTSpecimensResource.m in Sources */ = {isa = PBXBuildFile; fileRef = ED74D79C18A68C68005E612E /* GSTSpecimensResource.m */; };
 		ED74D7A018A68D93005E612E /* GSTSpecimenModel.m in Sources */ = {isa = PBXBuildFile; fileRef = ED74D79F18A68D93005E612E /* GSTSpecimenModel.m */; };
 		ED74D7A318A6963B005E612E /* GSTSpecimenTypeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = ED74D7A218A6963B005E612E /* GSTSpecimenTypeModel.m */; };
 		ED8AAA9C189E9DAE00697A0F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED8AAA9B189E9DAE00697A0F /* Foundation.framework */; };
@@ -28,13 +28,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		06B6575318A790C400FE9A87 /* GSTSpecimensResource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSTSpecimensResource.h; sourceTree = "<group>"; };
+		06B6575418A790C400FE9A87 /* GSTSpecimensResource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSTSpecimensResource.m; sourceTree = "<group>"; };
 		ED74D78018A67E2E005E612E /* GSTRESTResource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSTRESTResource.h; sourceTree = "<group>"; };
 		ED74D78118A67E2E005E612E /* GSTRESTResource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSTRESTResource.m; sourceTree = "<group>"; };
 		ED74D78218A67E2E005E612E /* GSTRESTResourceDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSTRESTResourceDelegate.h; sourceTree = "<group>"; };
 		ED74D79518A68391005E612E /* GSTActivityManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = GSTActivityManager.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		ED74D79618A68391005E612E /* GSTActivityManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = GSTActivityManager.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
-		ED74D79B18A68C68005E612E /* GSTSpecimensResource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GSTSpecimensResource.h; path = ../GSTSpecimensResource.h; sourceTree = "<group>"; };
-		ED74D79C18A68C68005E612E /* GSTSpecimensResource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GSTSpecimensResource.m; path = ../GSTSpecimensResource.m; sourceTree = "<group>"; };
 		ED74D79E18A68D93005E612E /* GSTSpecimenModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSTSpecimenModel.h; sourceTree = "<group>"; };
 		ED74D79F18A68D93005E612E /* GSTSpecimenModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSTSpecimenModel.m; sourceTree = "<group>"; };
 		ED74D7A118A6963B005E612E /* GSTSpecimenTypeModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSTSpecimenTypeModel.h; sourceTree = "<group>"; };
@@ -54,9 +54,6 @@
 		ED8AAAB1189E9DAE00697A0F /* GSTMainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GSTMainViewController.m; sourceTree = "<group>"; };
 		ED8AAAB3189E9DAE00697A0F /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		ED8AAABA189E9DAE00697A0F /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		ED8AAAC2189E9DAE00697A0F /* sampletrackerTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "sampletrackerTests-Info.plist"; sourceTree = "<group>"; };
-		ED8AAAC4189E9DAE00697A0F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		ED8AAAC6189E9DAE00697A0F /* sampletrackerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = sampletrackerTests.m; sourceTree = "<group>"; };
 		ED8AAAD4189EA81300697A0F /* GSTSettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSTSettingsViewController.h; sourceTree = "<group>"; };
 		ED8AAAD5189EA81300697A0F /* GSTSettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSTSettingsViewController.m; sourceTree = "<group>"; };
 		ED8AAAD7189EAA8D00697A0F /* GSTSpecimenLocationModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSTSpecimenLocationModel.h; sourceTree = "<group>"; };
@@ -85,11 +82,11 @@
 		ED74D77E18A67E0A005E612E /* REST */ = {
 			isa = PBXGroup;
 			children = (
-				ED74D79B18A68C68005E612E /* GSTSpecimensResource.h */,
-				ED74D79C18A68C68005E612E /* GSTSpecimensResource.m */,
 				ED74D78018A67E2E005E612E /* GSTRESTResource.h */,
 				ED74D78118A67E2E005E612E /* GSTRESTResource.m */,
 				ED74D78218A67E2E005E612E /* GSTRESTResourceDelegate.h */,
+				06B6575318A790C400FE9A87 /* GSTSpecimensResource.h */,
+				06B6575418A790C400FE9A87 /* GSTSpecimensResource.m */,
 			);
 			name = REST;
 			sourceTree = "<group>";
@@ -107,7 +104,6 @@
 			isa = PBXGroup;
 			children = (
 				ED8AAAA1189E9DAE00697A0F /* sampletracker */,
-				ED8AAAC0189E9DAE00697A0F /* sampletrackerTests */,
 				ED8AAA9A189E9DAE00697A0F /* Frameworks */,
 				ED8AAA99189E9DAE00697A0F /* Products */,
 			);
@@ -155,24 +151,6 @@
 				ED8AAAA4189E9DAE00697A0F /* InfoPlist.strings */,
 				ED8AAAA7189E9DAE00697A0F /* main.m */,
 				ED8AAAA9189E9DAE00697A0F /* sampletracker-Prefix.pch */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		ED8AAAC0189E9DAE00697A0F /* sampletrackerTests */ = {
-			isa = PBXGroup;
-			children = (
-				ED8AAAC6189E9DAE00697A0F /* sampletrackerTests.m */,
-				ED8AAAC1189E9DAE00697A0F /* Supporting Files */,
-			);
-			path = sampletrackerTests;
-			sourceTree = "<group>";
-		};
-		ED8AAAC1189E9DAE00697A0F /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				ED8AAAC2189E9DAE00697A0F /* sampletrackerTests-Info.plist */,
-				ED8AAAC3189E9DAE00697A0F /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -290,8 +268,8 @@
 			files = (
 				ED8AAAD6189EA81300697A0F /* GSTSettingsViewController.m in Sources */,
 				ED8AAAB2189E9DAE00697A0F /* GSTMainViewController.m in Sources */,
+				06B6575518A790C400FE9A87 /* GSTSpecimensResource.m in Sources */,
 				ED8AAAA8189E9DAE00697A0F /* main.m in Sources */,
-				ED74D79D18A68C68005E612E /* GSTSpecimensResource.m in Sources */,
 				ED74D79718A68391005E612E /* GSTActivityManager.m in Sources */,
 				ED8AAAAC189E9DAE00697A0F /* GSTAppDelegate.m in Sources */,
 				ED8AAADC189EAE4500697A0F /* GSTLocationPickerViewController.m in Sources */,
@@ -320,14 +298,6 @@
 				ED8AAAAE189E9DAE00697A0F /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		ED8AAAC3189E9DAE00697A0F /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				ED8AAAC4189E9DAE00697A0F /* en */,
-			);
-			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
