@@ -38,15 +38,19 @@
     return [NSString stringWithFormat:@"%@-%@-%@", self.type1, self.type2, self.type3];
 }
 
-- (NSArray *)type1Map {
+- (NSString *)description {
+    return self.locationIdentifier;
+}
+
++ (NSArray *)type1Map {
     return @[@"blood", @"buccal", @"hair", @"breastmilk", @"stool", @"vaginal_swab", @"placenta", @"cord_blood", @"tissue"];
 }
 
-- (NSArray *)type2Map {
++ (NSArray *)type2Map {
     return @[@"dna", @"rna"];
 }
 
-- (NSArray *)type3Map {
++ (NSArray *)type3Map {
     return @[@"amplicon", @"library", @"enriched_mtdna"];
 }
 @end

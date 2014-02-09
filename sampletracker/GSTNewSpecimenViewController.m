@@ -8,11 +8,12 @@
 
 #import "GSTNewSpecimenViewController.h"
 #import "GSTLocationPickerViewController.h"
+#import "GSTTypePickerViewController.h"
 #import "GSTSpecimenLocationModel.h"
 
 @interface GSTNewSpecimenViewController ()
-
-@property (weak, nonatomic) IBOutlet UILabel *locationValueLabel;
+@property (weak, nonatomic) IBOutlet UIButton *locationButton;
+@property (weak, nonatomic) IBOutlet UIButton *typeButton;
 
 @end
 
@@ -23,7 +24,12 @@
     NSString *locationIdentifier = [[NSUserDefaults standardUserDefaults] objectForKey:SETTINGS_LAST_LOCATION];
     if (locationIdentifier) {
         GSTSpecimenLocationModel *location = [[GSTSpecimenLocationModel alloc] initWithIdentifier:locationIdentifier];
-        self.locationValueLabel.text = location.description;
+        [self.locationButton setTitle:location.description forState:UIControlStateNormal];
+    }
+    NSString *typeIdentifier = [[NSUserDefaults standardUserDefaults] objectForKey:SETTINGS_LAST_TYPE];
+    if (typeIdentifier) {
+        GSTSpecimenTypeModel *type = [[GSTSpecimenTypeModel alloc] initWithIdentifier:typeIdentifier];
+        [self.typeButton setTitle:type.description forState:UIControlStateNormal];
     }
 }
 
@@ -36,6 +42,14 @@
             GSTSpecimenLocationModel *location = [[GSTSpecimenLocationModel alloc] initWithIdentifier:locationIdentifier];
             pickerController.location = location;
         }
+    } else if ([segue.identifier isEqualToString:@"openTypePicker"]) {
+        GSTTypePickerViewController *pickerController = segue.destinationViewController;
+        pickerController.delegate = self;
+        NSString *typeIdentifier = [[NSUserDefaults standardUserDefaults] objectForKey:SETTINGS_LAST_TYPE];
+        if (typeIdentifier) {
+            GSTSpecimenTypeModel *type = [[GSTSpecimenTypeModel alloc] initWithIdentifier:typeIdentifier];
+            pickerController.type = type;
+        }
     }
 }
 
@@ -43,7 +57,13 @@
 
 - (void)locationPicker:(GSTLocationPickerViewController *)picker didPickLocation:(GSTSpecimenLocationModel *)location {
     [[NSUserDefaults standardUserDefaults] setObject:location.locationIdentifier forKey:SETTINGS_LAST_LOCATION];
-    self.locationValueLabel.text = location.description;
+    [self.locationButton setTitle:location.description forState:UIControlStateNormal];
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
+- (void)typePicker:(GSTTypePickerViewController *)picker didPickType:(GSTSpecimenTypeModel *)type {
+    [[NSUserDefaults standardUserDefaults] setObject:type.locationIdentifier forKey:SETTINGS_LAST_TYPE];
+    [self.typeButton setTitle:type.description forState:UIControlStateNormal];
     [self.navigationController popViewControllerAnimated:YES];
 }
 

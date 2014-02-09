@@ -11,11 +11,12 @@
 @interface GSTSpecimenTypeModel : NSObject
 
 @property (nonatomic, retain) NSString *type1;
-@property (nonatomic, readonly) NSArray *type1Map;
 @property (nonatomic, retain) NSString *type2;
-@property (nonatomic, readonly) NSArray *type2Map;
 @property (nonatomic, retain) NSString *type3;
-@property (nonatomic, readonly) NSArray *type3Map;
+
++ (NSArray *)type1Map;
++ (NSArray *)type2Map;
++ (NSArray *)type3Map;
 
 - (instancetype)initWithIdentifier:(NSString *)locationIdentifier;
 - (NSString *)locationIdentifier;

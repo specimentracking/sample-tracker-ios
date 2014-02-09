@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0631171518A7F43A00088A69 /* GSTTypePickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0631171418A7F43A00088A69 /* GSTTypePickerViewController.m */; };
+		0631171A18A801C400088A69 /* GSTSegmentControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 0631171918A801C400088A69 /* GSTSegmentControl.m */; };
 		06B6575518A790C400FE9A87 /* GSTSpecimensResource.m in Sources */ = {isa = PBXBuildFile; fileRef = 06B6575418A790C400FE9A87 /* GSTSpecimensResource.m */; };
 		ED74D78318A67E2E005E612E /* GSTRESTResource.m in Sources */ = {isa = PBXBuildFile; fileRef = ED74D78118A67E2E005E612E /* GSTRESTResource.m */; };
 		ED74D79718A68391005E612E /* GSTActivityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = ED74D79618A68391005E612E /* GSTActivityManager.m */; };
@@ -28,6 +30,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0631171318A7F43A00088A69 /* GSTTypePickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSTTypePickerViewController.h; sourceTree = "<group>"; };
+		0631171418A7F43A00088A69 /* GSTTypePickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSTTypePickerViewController.m; sourceTree = "<group>"; };
+		0631171618A7F45200088A69 /* GSTTypePickerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSTTypePickerDelegate.h; sourceTree = "<group>"; };
+		0631171818A801C400088A69 /* GSTSegmentControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSTSegmentControl.h; sourceTree = "<group>"; };
+		0631171918A801C400088A69 /* GSTSegmentControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSTSegmentControl.m; sourceTree = "<group>"; };
 		06B6575318A790C400FE9A87 /* GSTSpecimensResource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSTSpecimensResource.h; sourceTree = "<group>"; };
 		06B6575418A790C400FE9A87 /* GSTSpecimensResource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSTSpecimensResource.m; sourceTree = "<group>"; };
 		ED74D78018A67E2E005E612E /* GSTRESTResource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSTRESTResource.h; sourceTree = "<group>"; };
@@ -79,6 +86,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0631171718A7FA1200088A69 /* Pickers */ = {
+			isa = PBXGroup;
+			children = (
+				ED8AAADD189EAE9000697A0F /* GSTLocationPickerDelegate.h */,
+				ED8AAADA189EAE4500697A0F /* GSTLocationPickerViewController.h */,
+				ED8AAADB189EAE4500697A0F /* GSTLocationPickerViewController.m */,
+				0631171618A7F45200088A69 /* GSTTypePickerDelegate.h */,
+				0631171318A7F43A00088A69 /* GSTTypePickerViewController.h */,
+				0631171418A7F43A00088A69 /* GSTTypePickerViewController.m */,
+			);
+			name = Pickers;
+			sourceTree = "<group>";
+		};
 		ED74D77E18A67E0A005E612E /* REST */ = {
 			isa = PBXGroup;
 			children = (
@@ -180,6 +200,8 @@
 		ED8AAAD2189E9F2D00697A0F /* View */ = {
 			isa = PBXGroup;
 			children = (
+				0631171818A801C400088A69 /* GSTSegmentControl.h */,
+				0631171918A801C400088A69 /* GSTSegmentControl.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -187,9 +209,7 @@
 		ED8AAAD3189E9F3000697A0F /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				ED8AAADD189EAE9000697A0F /* GSTLocationPickerDelegate.h */,
-				ED8AAADA189EAE4500697A0F /* GSTLocationPickerViewController.h */,
-				ED8AAADB189EAE4500697A0F /* GSTLocationPickerViewController.m */,
+				0631171718A7FA1200088A69 /* Pickers */,
 				ED8AAAB0189E9DAE00697A0F /* GSTMainViewController.h */,
 				ED8AAAB1189E9DAE00697A0F /* GSTMainViewController.m */,
 				ED8AAAD4189EA81300697A0F /* GSTSettingsViewController.h */,
@@ -276,6 +296,8 @@
 				ED74D7A018A68D93005E612E /* GSTSpecimenModel.m in Sources */,
 				ED74D7A318A6963B005E612E /* GSTSpecimenTypeModel.m in Sources */,
 				ED8AAAD9189EAA8D00697A0F /* GSTSpecimenLocationModel.m in Sources */,
+				0631171518A7F43A00088A69 /* GSTTypePickerViewController.m in Sources */,
+				0631171A18A801C400088A69 /* GSTSegmentControl.m in Sources */,
 				ED8AAAE0189EB9E100697A0F /* GSTNewSpecimenViewController.m in Sources */,
 				ED74D78318A67E2E005E612E /* GSTRESTResource.m in Sources */,
 			);

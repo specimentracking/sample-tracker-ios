@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="12F45" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="4Lk-kQ-kvj">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="13B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="4Lk-kQ-kvj">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
     </dependencies>
@@ -179,34 +179,55 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Location" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1ep-lu-Wkq">
-                                <rect key="frame" x="20" y="110" width="130" height="21"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1ep-lu-Wkq">
+                                <rect key="frame" x="20" y="84" width="67" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mcx-xY-K1P">
-                                <rect key="frame" x="20" y="139" width="280" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mcx-xY-K1P">
+                                <rect key="frame" x="223" y="113" width="77" height="30"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Change location">
+                                <state key="normal" title="1-2-3-4-A1">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <segue destination="EK0-16-Hj5" kind="push" identifier="openLocationPicker" id="U4j-DS-Y3e"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1-2-3-4-A1" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hG7-Tr-v0O">
-                                <rect key="frame" x="170" y="110" width="130" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qUc-iw-p38">
+                                <rect key="frame" x="20" y="163" width="67" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OiF-Db-GbG">
+                                <rect key="frame" x="55" y="192" width="245" height="30"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="vaginal_swam-dna-enriched_mtdna">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="FdI-M7-gg5" kind="push" identifier="openTypePicker" id="eae-6D-Qh1"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="1ep-lu-Wkq" firstAttribute="leading" secondItem="NJv-9L-xRQ" secondAttribute="leading" constant="20" id="4z6-MV-t9r"/>
+                            <constraint firstAttribute="trailing" secondItem="Mcx-xY-K1P" secondAttribute="trailing" constant="20" id="6BW-nl-FX7"/>
+                            <constraint firstItem="qUc-iw-p38" firstAttribute="leading" secondItem="NJv-9L-xRQ" secondAttribute="leading" constant="20" id="7sN-tb-GHF"/>
+                            <constraint firstItem="qUc-iw-p38" firstAttribute="top" secondItem="Mcx-xY-K1P" secondAttribute="bottom" constant="20" id="AU0-dn-tRQ"/>
+                            <constraint firstItem="1ep-lu-Wkq" firstAttribute="top" secondItem="5G9-7f-Iwr" secondAttribute="bottom" constant="20" id="RQE-5c-mwp"/>
+                            <constraint firstAttribute="trailing" secondItem="OiF-Db-GbG" secondAttribute="trailing" constant="20" id="Y37-tz-zjn"/>
+                            <constraint firstItem="Mcx-xY-K1P" firstAttribute="top" secondItem="1ep-lu-Wkq" secondAttribute="bottom" constant="8" id="cfD-R7-hNj"/>
+                            <constraint firstItem="OiF-Db-GbG" firstAttribute="top" secondItem="qUc-iw-p38" secondAttribute="bottom" constant="8" id="lIO-vS-AXL"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Q7h-Jv-hTJ"/>
                     <connections>
-                        <outlet property="locationValueLabel" destination="hG7-Tr-v0O" id="a6h-XS-cEG"/>
+                        <outlet property="locationButton" destination="Mcx-xY-K1P" id="bur-2s-hBD"/>
+                        <outlet property="typeButton" destination="OiF-Db-GbG" id="uK0-Xc-jba"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="G2e-ik-7Kg" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -285,7 +306,87 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ice-Ol-fJz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1372" y="231"/>
+            <point key="canvasLocation" x="1268" y="653"/>
+        </scene>
+        <!--Type Picker View Controller-->
+        <scene sceneID="jBu-Kj-W3Q">
+            <objects>
+                <viewController storyboardIdentifier="typePickerController" id="FdI-M7-gg5" customClass="GSTTypePickerViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="h8y-AO-x54"/>
+                        <viewControllerLayoutGuide type="bottom" id="KJd-UG-qqB"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Mr4-xc-mAr">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="puO-lf-gJ3">
+                                <rect key="frame" x="0.0" y="64" width="320" height="162"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="FdI-M7-gg5" id="kiJ-cr-PEi"/>
+                                    <outlet property="delegate" destination="FdI-M7-gg5" id="lKb-SB-jFB"/>
+                                </connections>
+                            </pickerView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" translatesAutoresizingMaskIntoConstraints="NO" id="2xM-8O-8PZ" customClass="GSTSegmentControl">
+                                <rect key="frame" x="20" y="246" width="280" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <segments>
+                                    <segment title="DNA"/>
+                                    <segment title="RNA"/>
+                                </segments>
+                                <connections>
+                                    <action selector="segmentValueChanged:" destination="FdI-M7-gg5" eventType="valueChanged" id="ENq-AU-G9x"/>
+                                </connections>
+                            </segmentedControl>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" translatesAutoresizingMaskIntoConstraints="NO" id="w5G-1Y-y22" customClass="GSTSegmentControl">
+                                <rect key="frame" x="20" y="294" width="280" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <segments>
+                                    <segment title="Amplicon"/>
+                                    <segment title="Library"/>
+                                    <segment title="Enriched mtDNA" width="125"/>
+                                </segments>
+                                <connections>
+                                    <action selector="segmentValueChanged:" destination="FdI-M7-gg5" eventType="valueChanged" id="lRX-Bz-Qyd"/>
+                                </connections>
+                            </segmentedControl>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G2Q-X8-c9c">
+                                <rect key="frame" x="126" y="362" width="69" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Save type">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="saveType:" destination="FdI-M7-gg5" eventType="touchUpInside" id="cUv-fg-WRc"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="G2Q-X8-c9c" secondAttribute="centerX" constant="-0.5" id="1wn-xU-K76"/>
+                            <constraint firstItem="2xM-8O-8PZ" firstAttribute="leading" secondItem="Mr4-xc-mAr" secondAttribute="leading" constant="20" id="3xa-iN-XMv"/>
+                            <constraint firstAttribute="trailing" secondItem="2xM-8O-8PZ" secondAttribute="trailing" constant="20" id="96N-hE-AEI"/>
+                            <constraint firstAttribute="trailing" secondItem="puO-lf-gJ3" secondAttribute="trailing" id="FQb-5V-hql"/>
+                            <constraint firstItem="2xM-8O-8PZ" firstAttribute="top" secondItem="puO-lf-gJ3" secondAttribute="bottom" constant="20" id="FiE-CG-33g"/>
+                            <constraint firstItem="puO-lf-gJ3" firstAttribute="top" secondItem="h8y-AO-x54" secondAttribute="bottom" id="J35-3Y-BEV"/>
+                            <constraint firstItem="w5G-1Y-y22" firstAttribute="top" secondItem="2xM-8O-8PZ" secondAttribute="bottom" constant="20" id="RMy-BJ-4pL"/>
+                            <constraint firstAttribute="trailing" secondItem="w5G-1Y-y22" secondAttribute="trailing" constant="20" id="eYV-xG-dhd"/>
+                            <constraint firstItem="G2Q-X8-c9c" firstAttribute="top" secondItem="w5G-1Y-y22" secondAttribute="bottom" constant="40" id="fZH-7T-Zbm"/>
+                            <constraint firstItem="puO-lf-gJ3" firstAttribute="leading" secondItem="Mr4-xc-mAr" secondAttribute="leading" id="iin-44-hSb"/>
+                            <constraint firstItem="w5G-1Y-y22" firstAttribute="leading" secondItem="Mr4-xc-mAr" secondAttribute="leading" constant="20" id="lRK-AX-jEa"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="acV-gQ-VI9"/>
+                    <connections>
+                        <outlet property="type1Picker" destination="puO-lf-gJ3" id="fvP-kS-Uf7"/>
+                        <outlet property="type2Segment" destination="2xM-8O-8PZ" id="dPQ-6F-INn"/>
+                        <outlet property="type3Segment" destination="w5G-1Y-y22" id="pu0-H4-fVd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="e4t-wW-yHK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1646" y="154"/>
         </scene>
         <!--Main View Controller - Galaxy Specimen Tracking-->
         <scene sceneID="j0v-bb-FSc">
@@ -317,6 +418,16 @@
                                 </state>
                                 <connections>
                                     <action selector="checkBarcode:" destination="2Ka-j6-Npg" eventType="touchUpInside" id="xQu-cQ-hd9"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eL6-Ag-ZEZ">
+                                <rect key="frame" x="109" y="127" width="102" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="New specimen">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="rUx-xD-KMC" kind="push" id="nPh-WY-6Xy"/>
                                 </connections>
                             </button>
                         </subviews>

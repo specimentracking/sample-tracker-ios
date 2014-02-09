@@ -1,0 +1,3 @@
+[submodule "ZXingObjC"]
+	path = ZXingObjC
+	url = https://github.com/TheLevelUp/ZXingObjC.git

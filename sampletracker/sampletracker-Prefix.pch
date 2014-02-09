@@ -21,3 +21,4 @@
 #define SETTINGS_API_KEY @"kSettingsApiKey"
 #define SETTINGS_PROJECT_ID @"kProjectId"
 #define SETTINGS_LAST_LOCATION @"kLastLocation"
+#define SETTINGS_LAST_TYPE @"kLastType"

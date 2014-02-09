@@ -8,7 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import "GSTLocationPickerDelegate.h"
+#import "GSTTypePickerDelegate.h"
 
-@interface GSTNewSpecimenViewController : UIViewController <GSTLocationPickerDelegate>
+@interface GSTNewSpecimenViewController : UIViewController <GSTLocationPickerDelegate, GSTTypePickerDelegate>
 
 @end
