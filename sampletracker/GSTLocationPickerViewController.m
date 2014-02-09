@@ -86,20 +86,20 @@
 - (NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component {
     NSString *title = nil;
     if (component == 0) {
-        title = [NSString stringWithFormat:@"%c", row+'A'];
+        title = [NSString stringWithFormat:@"%c", (char)row+'A'];
     } else if (component == 1) {
-        title = [NSString stringWithFormat:@"%i", row+1];
+        title = [NSString stringWithFormat:@"%i", (int)row+1];
     }
     return title;
 }
 
 - (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component {
     if (component == 0) {
-        self.spotTextField.text = [NSString stringWithFormat:@"%c-%c", row+'A', [self.location.spot characterAtIndex:1]];
-        self.location.spot = [NSString stringWithFormat:@"%c%c", row+'A', [self.location.spot characterAtIndex:1]];
+        self.spotTextField.text = [NSString stringWithFormat:@"%c-%c", (char)row+'A', [self.location.spot characterAtIndex:1]];
+        self.location.spot = [NSString stringWithFormat:@"%c%c", (char)row+'A', [self.location.spot characterAtIndex:1]];
     } else if (component == 1) {
-        self.spotTextField.text = [NSString stringWithFormat:@"%c-%c", [self.location.spot characterAtIndex:0], row+'1'];
-        self.location.spot = [NSString stringWithFormat:@"%c%c", [self.location.spot characterAtIndex:0], row+'1'];
+        self.spotTextField.text = [NSString stringWithFormat:@"%c-%c", [self.location.spot characterAtIndex:0], (char)row+'1'];
+        self.location.spot = [NSString stringWithFormat:@"%c%c", [self.location.spot characterAtIndex:0], (char)row+'1'];
     }
 }
 

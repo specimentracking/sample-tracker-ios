@@ -30,8 +30,8 @@ typedef NS_ENUM (NSInteger, GSTSpecimenState) {
 //Sample data
 @property (nonatomic, strong) NSString *parentId;
 @property (nonatomic, assign) GSTSpecimenState state;
-@property (nonatomic, strong) NSString *stateString; // Convenience getter for property state
-@property (nonatomic, strong) GSTSpecimenTypeModel *type
+@property (nonatomic, strong) NSString *stateString; // Convenience property state getter
+@property (nonatomic, strong) GSTSpecimenTypeModel *type;
 @property (nonatomic, strong) GSTSpecimenLocationModel *location;
 @property (nonatomic, strong) NSString *sex;
 @property (nonatomic, strong) NSString *family;
