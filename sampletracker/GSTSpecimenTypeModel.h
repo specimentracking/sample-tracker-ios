@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface GSTSpecimenTypeModel : NSObject
+@interface GSTSpecimenTypeModel : NSObject <NSCopying>
 
 @property (nonatomic, retain) NSString *type1;
 @property (nonatomic, retain) NSString *type2;

@@ -12,7 +12,7 @@
 
 @interface GSTLocationPickerViewController : UIViewController <UITextFieldDelegate, UIPickerViewDataSource, UIPickerViewDelegate>
 
-@property (nonatomic, retain) GSTSpecimenLocationModel *location;
+@property (nonatomic, copy) GSTSpecimenLocationModel *location;
 
 @property (nonatomic, weak) id<GSTLocationPickerDelegate> delegate;
 

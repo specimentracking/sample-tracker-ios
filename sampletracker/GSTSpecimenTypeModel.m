@@ -36,6 +36,18 @@
     return self;
 }
 
+- (instancetype)copyWithZone:(NSZone *)zone {
+    GSTSpecimenTypeModel *copyType = [[[self class] alloc] init];
+    
+    if (copyType) {
+        copyType.type1 = [self.type1 copy];
+        copyType.type2 = [self.type2 copy];
+        copyType.type3 = [self.type3 copy];
+    }
+    
+    return copyType;
+}
+
 - (NSString *)typeIdentifier {
     return [NSString stringWithFormat:@"%@-%@-%@", self.type1, self.type2, self.type3];
 }

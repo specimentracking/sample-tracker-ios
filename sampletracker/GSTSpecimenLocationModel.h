@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface GSTSpecimenLocationModel : NSObject
+@interface GSTSpecimenLocationModel : NSObject <NSCopying>
 
 @property (nonatomic, retain) NSString *fridge; // 1-99
 @property (nonatomic, retain) NSString *shelf; // 1-99

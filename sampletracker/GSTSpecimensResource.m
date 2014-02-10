@@ -17,7 +17,7 @@
 - (void)startCheckSpecimen:(NSString *)barcodeString {
     NSString *urlString = [GST_BASE_URL stringByAppendingFormat:@"projects/%@/specimens/check", [[NSUserDefaults standardUserDefaults] objectForKey:SETTINGS_PROJECT_ID]];
     self.resourceURL = [NSURL URLWithString:urlString];
-    [self startGetRequestWithParams:nil];
+    [self startGetRequestWithParams:[NSDictionary dictionaryWithObject:barcodeString forKey:@"barcode"]];
 }
 
 - (id)processJSONObject:(id)JSONObject {

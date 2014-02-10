@@ -33,6 +33,11 @@
         self.shelfTextField.text = self.location.shelf;
         self.rackTextField.text = self.location.rack;
         self.boxTextField.text = self.location.box;
+        self.fridgeStepper.value = [self.location.fridge doubleValue];
+        self.shelfStepper.value = [self.location.shelf doubleValue];
+        self.rackStepper.value = [self.location.rack doubleValue];
+        self.boxStepper.value = [self.location.box doubleValue];
+        
         self.spotTextField.text = [NSString stringWithFormat:@"%c-%c", [self.location.spot characterAtIndex:0], [self.location.spot characterAtIndex:1]];
         [self.spotPicker selectRow:[self.location.spot characterAtIndex:0]-'A' inComponent:0 animated:NO];
         [self.spotPicker selectRow:[self.location.spot characterAtIndex:1]-'1' inComponent:1 animated:NO];

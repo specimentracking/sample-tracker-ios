@@ -25,6 +25,20 @@
     return self;
 }
 
+- (instancetype)copyWithZone:(NSZone *)zone {
+    GSTSpecimenLocationModel *copyLocation = [[[self class] alloc] init];
+    
+    if (copyLocation) {
+        copyLocation.fridge = [self.fridge copy];
+        copyLocation.shelf = [self.shelf copy];
+        copyLocation.rack = [self.rack copy];
+        copyLocation.box = [self.box copy];
+        copyLocation.spot = [self.spot copy];
+    }
+    
+    return copyLocation;
+}
+
 - (NSString *)locationIdentifier {
     return [NSString stringWithFormat:@"fridge_%@-shelf_%@-rack_%@-box_%@-spot_%@", self.fridge, self.shelf, self.rack, self.box, self.spot];
 }

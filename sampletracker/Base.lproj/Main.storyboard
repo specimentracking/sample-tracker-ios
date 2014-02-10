@@ -321,7 +321,12 @@
                     </view>
                     <navigationItem key="navigationItem" id="Q7h-Jv-hTJ"/>
                     <connections>
+                        <outlet property="genLabel" destination="tOX-TZ-VbA" id="4T2-Rb-mMD"/>
+                        <outlet property="hapLabel" destination="GwI-bZ-u6O" id="UlD-Ix-Feu"/>
                         <outlet property="locationButton" destination="Mcx-xY-K1P" id="bur-2s-hBD"/>
+                        <outlet property="ngsLabel" destination="5ah-wD-MN0" id="hut-5t-D1b"/>
+                        <outlet property="pcrLabel" destination="fdy-TD-i7L" id="a3t-hs-zv7"/>
+                        <outlet property="sgrLabel" destination="jWy-A5-uxg" id="day-AK-d4r"/>
                         <outlet property="typeButton" destination="OiF-Db-GbG" id="uK0-Xc-jba"/>
                     </connections>
                 </viewController>
@@ -580,7 +585,6 @@
             <point key="canvasLocation" x="836" y="231"/>
         </scene>
     </scenes>
-    <color key="tintColor" red="0.16862745098039217" green="0.19215686274509802" blue="0.2627450980392157" alpha="1" colorSpace="calibratedRGB"/>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

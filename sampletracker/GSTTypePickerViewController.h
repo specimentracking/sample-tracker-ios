@@ -12,7 +12,7 @@
 
 @interface GSTTypePickerViewController : UIViewController <UIPickerViewDataSource, UIPickerViewDelegate>
 
-@property (nonatomic, retain) GSTSpecimenTypeModel *type;
+@property (nonatomic, copy) GSTSpecimenTypeModel *type;
 
 @property (nonatomic, weak) id<GSTTypePickerDelegate> delegate;
 
