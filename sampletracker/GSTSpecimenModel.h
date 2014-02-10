@@ -27,6 +27,9 @@ typedef NS_ENUM (NSInteger, GSTSpecimenState) {
 @property (nonatomic, strong) NSString *barCode;
 @property (nonatomic, strong) NSString *projectId;
 
+@property (nonatomic, assign) GSTSpecimenTypeModel *derivate;
+@property (nonatomic, strong) GSTSpecimenTypeModel *parent;
+
 //Sample data
 @property (nonatomic, strong) NSString *parentId;
 @property (nonatomic, assign) GSTSpecimenState state;
@@ -39,12 +42,13 @@ typedef NS_ENUM (NSInteger, GSTSpecimenState) {
 @property (nonatomic, strong) NSString *participantRelationship;
 @property (nonatomic, strong) NSDate *participantDob;
 @property (nonatomic, strong) NSDate *dateSend;
+@property (nonatomic, strong) NSDate *dateOfCollection;
 @property (nonatomic, strong) NSString *note;
 
-@property (nonatomic, assign) BOOL *genotypeFlag;
-@property (nonatomic, assign) BOOL *haplotypeFlag;
-@property (nonatomic, assign) BOOL *sangerSeqFlag;
-@property (nonatomic, assign) BOOL *nqsSegFlag;
-@property (nonatomic, assign) BOOL *ddPcrFlag;
+@property (nonatomic, assign) BOOL genotypeFlag;
+@property (nonatomic, assign) BOOL haplotypeFlag;
+@property (nonatomic, assign) BOOL sangerSeqFlag;
+@property (nonatomic, assign) BOOL ngsSegFlag;
+@property (nonatomic, assign) BOOL ddPcrFlag;
 
 @end

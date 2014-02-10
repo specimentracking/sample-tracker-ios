@@ -18,8 +18,8 @@
 + (NSArray *)type2Map;
 + (NSArray *)type3Map;
 
-- (instancetype)initWithIdentifier:(NSString *)locationIdentifier;
-- (NSString *)locationIdentifier;
+- (instancetype)initWithIdentifier:(NSString *)typeIdentifier;
+- (NSString *)typeIdentifier;
 
 
 @end

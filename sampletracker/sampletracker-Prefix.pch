@@ -17,6 +17,7 @@
 
 #import "GSTSpecimenModel.h"
 #import "GSTRESTResourceDelegate.h"
+#import "GSTDateUtility.h"
 
 #define SETTINGS_API_KEY @"kSettingsApiKey"
 #define SETTINGS_PROJECT_ID @"kProjectId"

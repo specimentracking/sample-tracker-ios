@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0616113718A9808400B65DFB /* GSTDateUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 0616113618A9808400B65DFB /* GSTDateUtility.m */; };
+		061E85E118A9649600E4B9FC /* libZXingObjC-iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 061E85D418A9648800E4B9FC /* libZXingObjC-iOS.a */; };
+		061E85E518A964BA00E4B9FC /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 061E85E418A964BA00E4B9FC /* AVFoundation.framework */; };
+		061E85E718A964C300E4B9FC /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 061E85E618A964C300E4B9FC /* CoreVideo.framework */; };
+		061E85E918A964CA00E4B9FC /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 061E85E818A964CA00E4B9FC /* CoreMedia.framework */; };
+		061E85EB18A964D400E4B9FC /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 061E85EA18A964D400E4B9FC /* ImageIO.framework */; };
+		061E85ED18A964DB00E4B9FC /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 061E85EC18A964DB00E4B9FC /* QuartzCore.framework */; };
+		061E85F118A968BF00E4B9FC /* GSTScanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 061E85F018A968BF00E4B9FC /* GSTScanViewController.m */; };
 		0631171518A7F43A00088A69 /* GSTTypePickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0631171418A7F43A00088A69 /* GSTTypePickerViewController.m */; };
 		0631171A18A801C400088A69 /* GSTSegmentControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 0631171918A801C400088A69 /* GSTSegmentControl.m */; };
 		06B6575518A790C400FE9A87 /* GSTSpecimensResource.m in Sources */ = {isa = PBXBuildFile; fileRef = 06B6575418A790C400FE9A87 /* GSTSpecimensResource.m */; };
@@ -26,10 +34,79 @@
 		ED8AAAD6189EA81300697A0F /* GSTSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED8AAAD5189EA81300697A0F /* GSTSettingsViewController.m */; };
 		ED8AAAD9189EAA8D00697A0F /* GSTSpecimenLocationModel.m in Sources */ = {isa = PBXBuildFile; fileRef = ED8AAAD8189EAA8D00697A0F /* GSTSpecimenLocationModel.m */; };
 		ED8AAADC189EAE4500697A0F /* GSTLocationPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED8AAADB189EAE4500697A0F /* GSTLocationPickerViewController.m */; };
-		ED8AAAE0189EB9E100697A0F /* GSTNewSpecimenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED8AAADF189EB9E100697A0F /* GSTNewSpecimenViewController.m */; };
+		ED8AAAE0189EB9E100697A0F /* GSTSpecimenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED8AAADF189EB9E100697A0F /* GSTSpecimenViewController.m */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		061E85D318A9648800E4B9FC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 061E85C918A9648700E4B9FC /* ZXingObjC.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 25403CB3166A96FA00E13304;
+			remoteInfo = "ZXingObjC-iOS";
+		};
+		061E85D518A9648800E4B9FC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 061E85C918A9648700E4B9FC /* ZXingObjC.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 25403CC4166A96FA00E13304;
+			remoteInfo = "Unit Tests iOS";
+		};
+		061E85D718A9648800E4B9FC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 061E85C918A9648700E4B9FC /* ZXingObjC.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 024958781898641B003D4E6A;
+			remoteInfo = "Blackbox Tests iOS";
+		};
+		061E85D918A9648800E4B9FC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 061E85C918A9648700E4B9FC /* ZXingObjC.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 25404166166AADAC00E13304;
+			remoteInfo = "ZXingObjC-osx";
+		};
+		061E85DB18A9648800E4B9FC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 061E85C918A9648700E4B9FC /* ZXingObjC.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 25404178166AADAC00E13304;
+			remoteInfo = "Unit Tests OS X";
+		};
+		061E85DD18A9648800E4B9FC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 061E85C918A9648700E4B9FC /* ZXingObjC.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 02D813F6189864C70081721D;
+			remoteInfo = "Blackbox Tests OS X";
+		};
+		061E85DF18A9648800E4B9FC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 061E85C918A9648700E4B9FC /* ZXingObjC.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 2540439E166ABA0A00E13304;
+			remoteInfo = "OS X Framework";
+		};
+		061E85E218A9649B00E4B9FC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 061E85C918A9648700E4B9FC /* ZXingObjC.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 25403CB2166A96FA00E13304;
+			remoteInfo = "ZXingObjC-iOS";
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		0616113518A9808400B65DFB /* GSTDateUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSTDateUtility.h; sourceTree = "<group>"; };
+		0616113618A9808400B65DFB /* GSTDateUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSTDateUtility.m; sourceTree = "<group>"; };
+		061E85C918A9648700E4B9FC /* ZXingObjC.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ZXingObjC.xcodeproj; path = "../../../Downloads/ZXingObjC-master/ZXingObjC.xcodeproj"; sourceTree = "<group>"; };
+		061E85E418A964BA00E4B9FC /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		061E85E618A964C300E4B9FC /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
+		061E85E818A964CA00E4B9FC /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		061E85EA18A964D400E4B9FC /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
+		061E85EC18A964DB00E4B9FC /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		061E85EF18A968BF00E4B9FC /* GSTScanViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSTScanViewController.h; sourceTree = "<group>"; };
+		061E85F018A968BF00E4B9FC /* GSTScanViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSTScanViewController.m; sourceTree = "<group>"; };
 		0631171318A7F43A00088A69 /* GSTTypePickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSTTypePickerViewController.h; sourceTree = "<group>"; };
 		0631171418A7F43A00088A69 /* GSTTypePickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSTTypePickerViewController.m; sourceTree = "<group>"; };
 		0631171618A7F45200088A69 /* GSTTypePickerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSTTypePickerDelegate.h; sourceTree = "<group>"; };
@@ -37,6 +114,7 @@
 		0631171918A801C400088A69 /* GSTSegmentControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSTSegmentControl.m; sourceTree = "<group>"; };
 		06B6575318A790C400FE9A87 /* GSTSpecimensResource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSTSpecimensResource.h; sourceTree = "<group>"; };
 		06B6575418A790C400FE9A87 /* GSTSpecimensResource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSTSpecimensResource.m; sourceTree = "<group>"; };
+		06FCD4F618A9735A002EF7A8 /* GSTScanDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GSTScanDelegate.h; sourceTree = "<group>"; };
 		ED74D78018A67E2E005E612E /* GSTRESTResource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSTRESTResource.h; sourceTree = "<group>"; };
 		ED74D78118A67E2E005E612E /* GSTRESTResource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSTRESTResource.m; sourceTree = "<group>"; };
 		ED74D78218A67E2E005E612E /* GSTRESTResourceDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSTRESTResourceDelegate.h; sourceTree = "<group>"; };
@@ -68,8 +146,8 @@
 		ED8AAADA189EAE4500697A0F /* GSTLocationPickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSTLocationPickerViewController.h; sourceTree = "<group>"; };
 		ED8AAADB189EAE4500697A0F /* GSTLocationPickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSTLocationPickerViewController.m; sourceTree = "<group>"; };
 		ED8AAADD189EAE9000697A0F /* GSTLocationPickerDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GSTLocationPickerDelegate.h; sourceTree = "<group>"; };
-		ED8AAADE189EB9E100697A0F /* GSTNewSpecimenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSTNewSpecimenViewController.h; sourceTree = "<group>"; };
-		ED8AAADF189EB9E100697A0F /* GSTNewSpecimenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSTNewSpecimenViewController.m; sourceTree = "<group>"; };
+		ED8AAADE189EB9E100697A0F /* GSTSpecimenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSTSpecimenViewController.h; sourceTree = "<group>"; };
+		ED8AAADF189EB9E100697A0F /* GSTSpecimenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSTSpecimenViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,7 +155,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				061E85ED18A964DB00E4B9FC /* QuartzCore.framework in Frameworks */,
+				061E85EB18A964D400E4B9FC /* ImageIO.framework in Frameworks */,
+				061E85E918A964CA00E4B9FC /* CoreMedia.framework in Frameworks */,
+				061E85E718A964C300E4B9FC /* CoreVideo.framework in Frameworks */,
 				ED8AAA9E189E9DAE00697A0F /* CoreGraphics.framework in Frameworks */,
+				061E85E518A964BA00E4B9FC /* AVFoundation.framework in Frameworks */,
+				061E85E118A9649600E4B9FC /* libZXingObjC-iOS.a in Frameworks */,
 				ED8AAAA0189E9DAE00697A0F /* UIKit.framework in Frameworks */,
 				ED8AAA9C189E9DAE00697A0F /* Foundation.framework in Frameworks */,
 			);
@@ -86,6 +170,45 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0616112E18A97F5800B65DFB /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				0616113518A9808400B65DFB /* GSTDateUtility.h */,
+				0616113618A9808400B65DFB /* GSTDateUtility.m */,
+			);
+			name = Utility;
+			sourceTree = "<group>";
+		};
+		061E85C718A9640300E4B9FC /* Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				061E85C818A9648200E4B9FC /* ZXingObjC */,
+			);
+			name = Libraries;
+			sourceTree = "<group>";
+		};
+		061E85C818A9648200E4B9FC /* ZXingObjC */ = {
+			isa = PBXGroup;
+			children = (
+				061E85C918A9648700E4B9FC /* ZXingObjC.xcodeproj */,
+			);
+			name = ZXingObjC;
+			sourceTree = "<group>";
+		};
+		061E85CA18A9648700E4B9FC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				061E85D418A9648800E4B9FC /* libZXingObjC-iOS.a */,
+				061E85D618A9648800E4B9FC /* Unit Tests iOS.octest */,
+				061E85D818A9648800E4B9FC /* ZXingObjCTests-iOS copy.octest */,
+				061E85DA18A9648800E4B9FC /* libZXingObjC-osx.a */,
+				061E85DC18A9648800E4B9FC /* Unit Tests OS X.octest */,
+				061E85DE18A9648800E4B9FC /* ZXingObjCTests-osx copy.octest */,
+				061E85E018A9648800E4B9FC /* ZXingObjC.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		0631171718A7FA1200088A69 /* Pickers */ = {
 			isa = PBXGroup;
 			children = (
@@ -97,6 +220,16 @@
 				0631171418A7F43A00088A69 /* GSTTypePickerViewController.m */,
 			);
 			name = Pickers;
+			sourceTree = "<group>";
+		};
+		06FCD4F718A976E0002EF7A8 /* Scanner */ = {
+			isa = PBXGroup;
+			children = (
+				06FCD4F618A9735A002EF7A8 /* GSTScanDelegate.h */,
+				061E85EF18A968BF00E4B9FC /* GSTScanViewController.h */,
+				061E85F018A968BF00E4B9FC /* GSTScanViewController.m */,
+			);
+			name = Scanner;
 			sourceTree = "<group>";
 		};
 		ED74D77E18A67E0A005E612E /* REST */ = {
@@ -124,6 +257,7 @@
 			isa = PBXGroup;
 			children = (
 				ED8AAAA1189E9DAE00697A0F /* sampletracker */,
+				061E85C718A9640300E4B9FC /* Libraries */,
 				ED8AAA9A189E9DAE00697A0F /* Frameworks */,
 				ED8AAA99189E9DAE00697A0F /* Products */,
 			);
@@ -140,6 +274,11 @@
 		ED8AAA9A189E9DAE00697A0F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				061E85EC18A964DB00E4B9FC /* QuartzCore.framework */,
+				061E85EA18A964D400E4B9FC /* ImageIO.framework */,
+				061E85E818A964CA00E4B9FC /* CoreMedia.framework */,
+				061E85E618A964C300E4B9FC /* CoreVideo.framework */,
+				061E85E418A964BA00E4B9FC /* AVFoundation.framework */,
 				ED8AAA9B189E9DAE00697A0F /* Foundation.framework */,
 				ED8AAA9D189E9DAE00697A0F /* CoreGraphics.framework */,
 				ED8AAA9F189E9DAE00697A0F /* UIKit.framework */,
@@ -151,6 +290,7 @@
 		ED8AAAA1189E9DAE00697A0F /* sampletracker */ = {
 			isa = PBXGroup;
 			children = (
+				0616112E18A97F5800B65DFB /* Utility */,
 				ED74D79418A68384005E612E /* Manager */,
 				ED74D77E18A67E0A005E612E /* REST */,
 				ED8AAAD2189E9F2D00697A0F /* View */,
@@ -210,12 +350,13 @@
 			isa = PBXGroup;
 			children = (
 				0631171718A7FA1200088A69 /* Pickers */,
+				06FCD4F718A976E0002EF7A8 /* Scanner */,
 				ED8AAAB0189E9DAE00697A0F /* GSTMainViewController.h */,
 				ED8AAAB1189E9DAE00697A0F /* GSTMainViewController.m */,
 				ED8AAAD4189EA81300697A0F /* GSTSettingsViewController.h */,
 				ED8AAAD5189EA81300697A0F /* GSTSettingsViewController.m */,
-				ED8AAADE189EB9E100697A0F /* GSTNewSpecimenViewController.h */,
-				ED8AAADF189EB9E100697A0F /* GSTNewSpecimenViewController.m */,
+				ED8AAADE189EB9E100697A0F /* GSTSpecimenViewController.h */,
+				ED8AAADF189EB9E100697A0F /* GSTSpecimenViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -234,6 +375,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				061E85E318A9649B00E4B9FC /* PBXTargetDependency */,
 			);
 			name = sampletracker;
 			productName = sampletracker;
@@ -261,12 +403,70 @@
 			mainGroup = ED8AAA8F189E9DAE00697A0F;
 			productRefGroup = ED8AAA99189E9DAE00697A0F /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 061E85CA18A9648700E4B9FC /* Products */;
+					ProjectRef = 061E85C918A9648700E4B9FC /* ZXingObjC.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				ED8AAA97189E9DAE00697A0F /* sampletracker */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		061E85D418A9648800E4B9FC /* libZXingObjC-iOS.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libZXingObjC-iOS.a";
+			remoteRef = 061E85D318A9648800E4B9FC /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		061E85D618A9648800E4B9FC /* Unit Tests iOS.octest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "Unit Tests iOS.octest";
+			remoteRef = 061E85D518A9648800E4B9FC /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		061E85D818A9648800E4B9FC /* ZXingObjCTests-iOS copy.octest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "ZXingObjCTests-iOS copy.octest";
+			remoteRef = 061E85D718A9648800E4B9FC /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		061E85DA18A9648800E4B9FC /* libZXingObjC-osx.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libZXingObjC-osx.a";
+			remoteRef = 061E85D918A9648800E4B9FC /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		061E85DC18A9648800E4B9FC /* Unit Tests OS X.octest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "Unit Tests OS X.octest";
+			remoteRef = 061E85DB18A9648800E4B9FC /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		061E85DE18A9648800E4B9FC /* ZXingObjCTests-osx copy.octest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "ZXingObjCTests-osx copy.octest";
+			remoteRef = 061E85DD18A9648800E4B9FC /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		061E85E018A9648800E4B9FC /* ZXingObjC.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = ZXingObjC.framework;
+			remoteRef = 061E85DF18A9648800E4B9FC /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		ED8AAA96189E9DAE00697A0F /* Resources */ = {
@@ -287,23 +487,33 @@
 			buildActionMask = 2147483647;
 			files = (
 				ED8AAAD6189EA81300697A0F /* GSTSettingsViewController.m in Sources */,
+				061E85F118A968BF00E4B9FC /* GSTScanViewController.m in Sources */,
 				ED8AAAB2189E9DAE00697A0F /* GSTMainViewController.m in Sources */,
 				06B6575518A790C400FE9A87 /* GSTSpecimensResource.m in Sources */,
 				ED8AAAA8189E9DAE00697A0F /* main.m in Sources */,
 				ED74D79718A68391005E612E /* GSTActivityManager.m in Sources */,
 				ED8AAAAC189E9DAE00697A0F /* GSTAppDelegate.m in Sources */,
 				ED8AAADC189EAE4500697A0F /* GSTLocationPickerViewController.m in Sources */,
+				0616113718A9808400B65DFB /* GSTDateUtility.m in Sources */,
 				ED74D7A018A68D93005E612E /* GSTSpecimenModel.m in Sources */,
 				ED74D7A318A6963B005E612E /* GSTSpecimenTypeModel.m in Sources */,
 				ED8AAAD9189EAA8D00697A0F /* GSTSpecimenLocationModel.m in Sources */,
 				0631171518A7F43A00088A69 /* GSTTypePickerViewController.m in Sources */,
 				0631171A18A801C400088A69 /* GSTSegmentControl.m in Sources */,
-				ED8AAAE0189EB9E100697A0F /* GSTNewSpecimenViewController.m in Sources */,
+				ED8AAAE0189EB9E100697A0F /* GSTSpecimenViewController.m in Sources */,
 				ED74D78318A67E2E005E612E /* GSTRESTResource.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		061E85E318A9649B00E4B9FC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "ZXingObjC-iOS";
+			targetProxy = 061E85E218A9649B00E4B9FC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		ED8AAAA4189E9DAE00697A0F /* InfoPlist.strings */ = {
@@ -369,14 +579,20 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "sampletracker/sampletracker-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					ENV_TEST,
 				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../../Downloads/ZXingObjC-master/ZXingObjC\"/**",
+				);
 				INFOPLIST_FILE = "sampletracker/sampletracker-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = "Test-Dev";
@@ -425,14 +641,20 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "sampletracker/sampletracker-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					ENV_PROD,
 				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../../Downloads/ZXingObjC-master/ZXingObjC\"/**",
+				);
 				INFOPLIST_FILE = "sampletracker/sampletracker-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = "Prod-Dev";
@@ -475,11 +697,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "sampletracker/sampletracker-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = ENV_TEST;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../../Downloads/ZXingObjC-master/ZXingObjC\"/**",
+				);
 				INFOPLIST_FILE = "sampletracker/sampletracker-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = "Test-Dist";
@@ -522,11 +750,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "sampletracker/sampletracker-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = ENV_PROD;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../../Downloads/ZXingObjC-master/ZXingObjC\"/**",
+				);
 				INFOPLIST_FILE = "sampletracker/sampletracker-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = "Prod-Dist";
@@ -608,14 +842,20 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "sampletracker/sampletracker-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					ENV_MOCK,
 				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../../Downloads/ZXingObjC-master/ZXingObjC\"/**",
+				);
 				INFOPLIST_FILE = "sampletracker/sampletracker-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = "Mock-Dev";
@@ -625,11 +865,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "sampletracker/sampletracker-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = ENV_MOCK;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../../Downloads/ZXingObjC-master/ZXingObjC\"/**",
+				);
 				INFOPLIST_FILE = "sampletracker/sampletracker-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = "Mock-Dist";

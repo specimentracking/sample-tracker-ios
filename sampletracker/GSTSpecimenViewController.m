@@ -6,30 +6,33 @@
 //  Copyright (c) 2014 Galaxy. All rights reserved.
 //
 
-#import "GSTNewSpecimenViewController.h"
+#import "GSTSpecimenViewController.h"
 #import "GSTLocationPickerViewController.h"
 #import "GSTTypePickerViewController.h"
 #import "GSTSpecimenLocationModel.h"
 
-@interface GSTNewSpecimenViewController ()
+@interface GSTSpecimenViewController ()
 @property (weak, nonatomic) IBOutlet UIButton *locationButton;
 @property (weak, nonatomic) IBOutlet UIButton *typeButton;
 
 @end
 
-@implementation GSTNewSpecimenViewController
+@implementation GSTSpecimenViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    NSString *locationIdentifier = [[NSUserDefaults standardUserDefaults] objectForKey:SETTINGS_LAST_LOCATION];
-    if (locationIdentifier) {
-        GSTSpecimenLocationModel *location = [[GSTSpecimenLocationModel alloc] initWithIdentifier:locationIdentifier];
-        [self.locationButton setTitle:location.description forState:UIControlStateNormal];
+
+    if (!self.specimen) {
+        self.specimen = [[GSTSpecimenModel alloc] init];
+        self.specimen.location = [[GSTSpecimenLocationModel alloc] initWithIdentifier:[[NSUserDefaults standardUserDefaults] objectForKey:SETTINGS_LAST_LOCATION]];
+        self.specimen.type = [[GSTSpecimenTypeModel alloc] initWithIdentifier:[[NSUserDefaults standardUserDefaults] objectForKey:SETTINGS_LAST_TYPE]];
     }
-    NSString *typeIdentifier = [[NSUserDefaults standardUserDefaults] objectForKey:SETTINGS_LAST_TYPE];
-    if (typeIdentifier) {
-        GSTSpecimenTypeModel *type = [[GSTSpecimenTypeModel alloc] initWithIdentifier:typeIdentifier];
-        [self.typeButton setTitle:type.description forState:UIControlStateNormal];
+    
+    if (self.specimen.location) {
+        [self.locationButton setTitle:self.specimen.location.description forState:UIControlStateNormal];
+    }
+    if (self.specimen.type) {
+        [self.typeButton setTitle:self.specimen.type.description forState:UIControlStateNormal];
     }
 }
 
@@ -37,21 +40,15 @@
     if ([segue.identifier isEqualToString:@"openLocationPicker"]) {
         GSTLocationPickerViewController *pickerController = segue.destinationViewController;
         pickerController.delegate = self;
-        NSString *locationIdentifier = [[NSUserDefaults standardUserDefaults] objectForKey:SETTINGS_LAST_LOCATION];
-        if (locationIdentifier) {
-            GSTSpecimenLocationModel *location = [[GSTSpecimenLocationModel alloc] initWithIdentifier:locationIdentifier];
-            pickerController.location = location;
-        }
+        pickerController.location = self.specimen.location;
     } else if ([segue.identifier isEqualToString:@"openTypePicker"]) {
         GSTTypePickerViewController *pickerController = segue.destinationViewController;
         pickerController.delegate = self;
-        NSString *typeIdentifier = [[NSUserDefaults standardUserDefaults] objectForKey:SETTINGS_LAST_TYPE];
-        if (typeIdentifier) {
-            GSTSpecimenTypeModel *type = [[GSTSpecimenTypeModel alloc] initWithIdentifier:typeIdentifier];
-            pickerController.type = type;
-        }
+        pickerController.type = self.specimen.type;
     }
 }
+
+#pragma mark - Auxiliary
 
 #pragma mark - Location picker
 
@@ -62,7 +59,7 @@
 }
 
 - (void)typePicker:(GSTTypePickerViewController *)picker didPickType:(GSTSpecimenTypeModel *)type {
-    [[NSUserDefaults standardUserDefaults] setObject:type.locationIdentifier forKey:SETTINGS_LAST_TYPE];
+    [[NSUserDefaults standardUserDefaults] setObject:type.typeIdentifier forKey:SETTINGS_LAST_TYPE];
     [self.typeButton setTitle:type.description forState:UIControlStateNormal];
     [self.navigationController popViewControllerAnimated:YES];
 }

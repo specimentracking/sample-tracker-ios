@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "GSTScanDelegate.h"
 
-@interface GSTMainViewController : UIViewController <GSTRESTResourceDelegate>
+@interface GSTMainViewController : UIViewController <GSTRESTResourceDelegate, GSTScanDelegate>
 
 @end

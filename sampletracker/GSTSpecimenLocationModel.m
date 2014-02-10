@@ -11,14 +11,16 @@
 @implementation GSTSpecimenLocationModel
 
 - (instancetype)initWithIdentifier:(NSString *)locationIdentifier {
-    self = [super init];
-    if (self) {
-        if (locationIdentifier) {            
+    if (locationIdentifier) {
+        self = [super init];
+        if (self) {
             for (NSString *locationComponent in [locationIdentifier componentsSeparatedByString:@"-"]) {
                 NSArray *keyVal = [locationComponent componentsSeparatedByString:@"_"];
                 [self setValue:keyVal[1] forKey:keyVal[0]];
             }
         }
+    } else {
+        self = nil;
     }
     return self;
 }

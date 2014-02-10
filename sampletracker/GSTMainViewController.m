@@ -8,6 +8,8 @@
 
 #import "GSTMainViewController.h"
 #import "GSTSpecimensResource.h"
+#import "GSTSpecimenViewController.h"
+#import "GSTScanViewController.h"
 
 @interface GSTMainViewController ()
 
@@ -30,11 +32,36 @@
 	
 }
 
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:@"openScanner"]) {
+        GSTScanViewController *scanController = segue.destinationViewController;
+        scanController.delegate = self;
+    } else if ([segue.identifier isEqualToString:@"openSpecimen"]) {
+        GSTSpecimenViewController *specimenController = segue.destinationViewController;
+        specimenController.specimen = sender;
+    }
+}
+
 #pragma mark - Actions
 
-- (IBAction)checkBarcode:(id)sender {
+- (IBAction)scanBarcode:(id)sender {
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    if (![userDefaults objectForKey:SETTINGS_API_KEY] || ![userDefaults objectForKey:SETTINGS_API_KEY]) {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Please fill in Project ID and API key in Settings befor proceeding" message:nil delegate:nil cancelButtonTitle:@"Close" otherButtonTitles: nil];
+        [alert show];
+    } else {
+        [self performSegueWithIdentifier:@"openScanner" sender:sender];
+    }
+    
+}
+
+#pragma mark - Scan delegate
+
+- (void)scaner:(GSTScanViewController *)scanner didScanTest:(NSString *)result {
+    [self.navigationController popViewControllerAnimated:YES];
+    
     self.specimensResource = [[GSTSpecimensResource alloc] initWithDelegate:self];
-    [self.specimensResource startCheckSpecimen:@"123456"];
+    [self.specimensResource startCheckSpecimen:result];
 }
 
 #pragma mark - REST Delegate
@@ -48,7 +75,7 @@
 }
 
 - (void)request:(GSTRESTResource *)request didFinishWithData:(id)resourceData {
-    
+    [self performSegueWithIdentifier:@"openSpecimen" sender:resourceData];
 }
 
 

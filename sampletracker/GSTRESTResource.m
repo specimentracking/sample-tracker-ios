@@ -141,10 +141,6 @@
     self.recievedData = [NSMutableData data];
     self.connection = [[NSURLConnection alloc] initWithRequest:request delegate:self startImmediately:YES];
     
-#ifdef DEBUG_CONNECTION
-    NSLog(@"▶️ %@", self.resourceURL);
-#endif
-    
     [GSTActivityManager addActivity];
     
     if ([self.delegate respondsToSelector:@selector(requestDidStart:)]) {
@@ -158,9 +154,6 @@
             [GSTActivityManager removeActivity];
             self.canceled = YES;
             [self.connection cancel];
-#ifdef DEBUG_CONNECTION
-            NSLog(@"❌ canceled %@", self.resourceURL);
-#endif
         }
     }
 }
@@ -176,10 +169,6 @@
 - (void)connectionDidFinishLoading:(NSURLConnection *)connection {
     @synchronized (self) {
         if (!self.isCanceled) {
-#ifdef DEBUG_CONNECTION
-            NSLog(@"✅ did finish loading %@", self.resourceURL);
-#endif
-            
             NSError *parserError;
             NSDictionary *jsonObject = [NSJSONSerialization JSONObjectWithData:self.recievedData options:0 error:&parserError];
             if (parserError) {
@@ -195,9 +184,6 @@
 - (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error {
     @synchronized (self) {
         [GSTActivityManager removeActivity];
-#ifdef DEBUG_CONNECTION
-        NSLog(@"‼️ %@ %@(%i) %@", self.resourceURL, error.domain, error.code, error.localizedDescription);
-#endif
         if (!self.isCanceled && [self.delegate respondsToSelector:@selector(request:didFailLoadingWithError:)]) {
             [self.delegate request:self didFailLoadingWithError:error];
         }
@@ -211,9 +197,6 @@
 - (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response {
     @synchronized (self) {
         NSHTTPURLResponse *httpResponse = (NSHTTPURLResponse *)response;
-#ifdef DEBUG_CONNECTION
-        NSLog(@"◀️ %d %@", httpResponse.statusCode, self.resourceURL);
-#endif
         if ([self.delegate respondsToSelector:@selector(request:didReceiveHeader:statusCode:)]) {
             [self.delegate request:self didReceiveHeader:httpResponse.allHeaderFields statusCode:httpResponse.statusCode];
         }
@@ -221,12 +204,7 @@
 }
 
 - (void)connection:(NSURLConnection *)connection willSendRequestForAuthenticationChallenge:(NSURLAuthenticationChallenge *)challenge {
-#ifdef DEBUG_CONNECTION
-    NSLog(@"🔒 Connection did received authentication challenge with method: %@", challenge.protectionSpace.authenticationMethod);
-#endif
-
     BOOL trustServer = NO;
-    
     SecTrustRef trust = challenge.protectionSpace.serverTrust;
     if (trust) {
         SecCertificateRef certRef = SecTrustGetCertificateAtIndex(challenge.protectionSpace.serverTrust, 0);

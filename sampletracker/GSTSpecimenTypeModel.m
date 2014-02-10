@@ -10,11 +10,11 @@
 
 @implementation GSTSpecimenTypeModel
 
-- (instancetype)initWithIdentifier:(NSString *)locationIdentifier {
-    self = [super init];
-    if (self) {
-        if (locationIdentifier) {
-            [[locationIdentifier componentsSeparatedByString:@"-"] enumerateObjectsUsingBlock:^(NSString *string, NSUInteger idx, BOOL *stop) {
+- (instancetype)initWithIdentifier:(NSString *)typeIdentifier {
+    if (typeIdentifier) {
+        self = [super init];
+        if (self) {
+            [[typeIdentifier componentsSeparatedByString:@"-"] enumerateObjectsUsingBlock:^(NSString *string, NSUInteger idx, BOOL *stop) {
                 switch (idx) {
                     case 0:
                         _type1 = string;
@@ -30,16 +30,18 @@
                 }
             }];
         }
+    } else {
+        self = nil;
     }
     return self;
 }
 
-- (NSString *)locationIdentifier {
+- (NSString *)typeIdentifier {
     return [NSString stringWithFormat:@"%@-%@-%@", self.type1, self.type2, self.type3];
 }
 
 - (NSString *)description {
-    return self.locationIdentifier;
+    return self.typeIdentifier;
 }
 
 + (NSArray *)type1Map {
