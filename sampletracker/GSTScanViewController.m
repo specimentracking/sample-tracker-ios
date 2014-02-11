@@ -21,6 +21,15 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+#if TARGET_IPHONE_SIMULATOR
+    double delayInSeconds = 2.0;
+    dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delayInSeconds * NSEC_PER_SEC));
+    dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
+        [self.delegate scanner:self didScanTest:@"test"];
+    });
+    return;
+#endif
+    
     self.title = @"Scanning";
     
     self.capture = [[ZXCapture alloc] init];
@@ -41,7 +50,7 @@
     @synchronized(self) {        
         if (result && !self.captured && result.barcodeFormat == kBarcodeFormatAztec) {
             self.captured = YES;
-            [self.delegate scaner:self didScanTest:result.text];
+            [self.delegate scanner:self didScanTest:result.text];
             [self.capture stop];
         }
     }

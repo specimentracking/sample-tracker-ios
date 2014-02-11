@@ -57,8 +57,8 @@
 
 #pragma mark - Scan delegate
 
-- (void)scaner:(GSTScanViewController *)scanner didScanTest:(NSString *)result {
-    [self.navigationController popViewControllerAnimated:YES];
+- (void)scanner:(GSTScanViewController *)scanner didScanTest:(NSString *)result {
+    [self.navigationController popViewControllerAnimated:NO];
     
     self.specimensResource = [[GSTSpecimensResource alloc] initWithDelegate:self];
     [self.specimensResource startCheckSpecimen:result];

@@ -10,7 +10,7 @@
 #import "GSTLocationPickerDelegate.h"
 #import "GSTTypePickerDelegate.h"
 
-@interface GSTSpecimenViewController : UIViewController <GSTLocationPickerDelegate, GSTTypePickerDelegate>
+@interface GSTSpecimenViewController : UIViewController <GSTLocationPickerDelegate, GSTTypePickerDelegate, UIPickerViewDataSource, UIPickerViewDelegate>
 
 @property (nonatomic, strong) GSTSpecimenModel *specimen;
 

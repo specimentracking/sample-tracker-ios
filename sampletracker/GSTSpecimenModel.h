@@ -51,4 +51,6 @@ typedef NS_ENUM (NSInteger, GSTSpecimenState) {
 @property (nonatomic, assign) BOOL ngsSegFlag;
 @property (nonatomic, assign) BOOL ddPcrFlag;
 
++ (NSArray *)stateMap;
+
 @end

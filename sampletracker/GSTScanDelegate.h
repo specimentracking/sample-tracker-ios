@@ -12,6 +12,6 @@
 
 @protocol GSTScanDelegate <NSObject>
 
-- (void)scaner:(GSTScanViewController *)scanner didScanTest:(NSString *)result;
+- (void)scanner:(GSTScanViewController *)scanner didScanTest:(NSString *)result;
 
 @end

@@ -10,22 +10,20 @@
 
 @interface GSTSpecimenModel ()
 
-@property (nonatomic, readonly) NSArray *stateMap;
-
 @end
 
 @implementation GSTSpecimenModel
 
-- (NSArray *)stateMap {
++ (NSArray *)stateMap {
     return @[@"new", @"onroad", @"psu", @"depleted", @"lost", @"discarded"];
 }
 
 - (NSString *)stateString {
-    return self.stateMap[self.state];
+    return [GSTSpecimenModel stateMap][self.state];
 }
 
 - (void)setStateString:(NSString *)stateString {
-    self.state = [self.stateMap indexOfObject:stateString];
+    self.state = [[GSTSpecimenModel stateMap] indexOfObject:stateString];
 }
 
 @end

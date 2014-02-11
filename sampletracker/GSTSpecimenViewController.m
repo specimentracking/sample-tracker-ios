@@ -12,6 +12,9 @@
 #import "GSTSpecimenLocationModel.h"
 
 @interface GSTSpecimenViewController ()
+
+@property (weak, nonatomic) IBOutlet UIPickerView *statePicker;
+
 @property (weak, nonatomic) IBOutlet UIButton *locationButton;
 @property (weak, nonatomic) IBOutlet UIButton *typeButton;
 
@@ -30,8 +33,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
+    self.title = @"Specimen";
+    
     if (!self.specimen) {
         self.specimen = [[GSTSpecimenModel alloc] init];
+        self.specimen.state = GSTSpecimenStateNew;
         self.specimen.location = [[GSTSpecimenLocationModel alloc] initWithIdentifier:[[NSUserDefaults standardUserDefaults] objectForKey:SETTINGS_LAST_LOCATION]];
         self.specimen.type = [[GSTSpecimenTypeModel alloc] initWithIdentifier:[[NSUserDefaults standardUserDefaults] objectForKey:SETTINGS_LAST_TYPE]];
         self.ngsLabel.hidden = YES;
@@ -53,6 +59,7 @@
     if (self.specimen.type) {
         [self.typeButton setTitle:self.specimen.type.description forState:UIControlStateNormal];
     }
+    [self.statePicker selectRow:self.specimen.state inComponent:0 animated:NO];
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
@@ -83,6 +90,24 @@
     self.specimen.type = type;
     [self.typeButton setTitle:type.description forState:UIControlStateNormal];
     [self.navigationController popViewControllerAnimated:YES];
+}
+
+#pragma mark - Picker View
+
+- (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component {
+    return [GSTSpecimenModel stateMap].count;
+}
+
+- (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView {
+    return 1;
+}
+
+- (NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component {
+    return [[GSTSpecimenModel stateMap][row] capitalizedString];
+}
+
+- (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component {
+    self.specimen.state = row;
 }
 
 @end
