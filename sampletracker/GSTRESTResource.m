@@ -207,8 +207,8 @@
     BOOL trustServer = NO;
     SecTrustRef trust = challenge.protectionSpace.serverTrust;
     if (trust) {
-        SecCertificateRef certRef = SecTrustGetCertificateAtIndex(challenge.protectionSpace.serverTrust, 0);
-        NSData *serverCertificateData = (__bridge NSData *)SecCertificateCopyData(certRef);
+//        SecCertificateRef certRef = SecTrustGetCertificateAtIndex(challenge.protectionSpace.serverTrust, 0);
+//        NSData *serverCertificateData = (__bridge NSData *)SecCertificateCopyData(certRef);
 //        NSString *serverCertificateDataHash = [[serverCertificateData stringUsingBase64Encoding] SHA256];
 //        if ([serverCertificateDataHash isEqual:CERT_HASH_TCWS] || [serverCertificateDataHash isEqual:CERT_HASH_STS]) {
             trustServer = YES;
