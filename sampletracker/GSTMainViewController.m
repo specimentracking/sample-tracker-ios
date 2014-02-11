@@ -46,11 +46,13 @@
 
 - (IBAction)scanBarcode:(id)sender {
     NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
-    if (![userDefaults objectForKey:SETTINGS_API_KEY] || ![userDefaults objectForKey:SETTINGS_API_KEY]) {
+    NSString *projectId = [userDefaults objectForKey:SETTINGS_PROJECT_ID];
+    NSString *apiKey = [userDefaults objectForKey:SETTINGS_API_KEY];
+    if (projectId.length > 0 && apiKey.length > 0) {
+        [self performSegueWithIdentifier:@"openScanner" sender:sender];
+    } else {
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Please fill in Project ID and API key in Settings befor proceeding" message:nil delegate:nil cancelButtonTitle:@"Close" otherButtonTitles: nil];
         [alert show];
-    } else {
-        [self performSegueWithIdentifier:@"openScanner" sender:sender];
     }
     
 }
