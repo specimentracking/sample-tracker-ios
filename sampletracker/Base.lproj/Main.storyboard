@@ -343,6 +343,9 @@
                                 <state key="normal" title="Save">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="patchSpecimen:" destination="rUx-xD-KMC" eventType="touchUpInside" id="ur0-WC-uiJ"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rc1-b7-nTy">
                                 <rect key="frame" x="20" y="409" width="170" height="30"/>
@@ -350,6 +353,19 @@
                                 <state key="normal" title="Create derivative sample">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="createDerivate:" destination="rUx-xD-KMC" eventType="touchUpInside" id="yA2-SU-n92"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O9w-Gj-i97">
+                                <rect key="frame" x="139" y="409" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Create">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="createSpecimen:" destination="rUx-xD-KMC" eventType="touchUpInside" id="9eP-BT-RZE"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -375,6 +391,7 @@
                             <constraint firstItem="r8W-vQ-OAE" firstAttribute="leading" secondItem="GwI-bZ-u6O" secondAttribute="trailing" id="G5b-jo-Dbd"/>
                             <constraint firstItem="jWy-A5-uxg" firstAttribute="centerY" secondItem="1XX-ET-gEI" secondAttribute="centerY" id="KXi-dm-DC2"/>
                             <constraint firstItem="O3K-qz-Ywi" firstAttribute="leading" secondItem="tOX-TZ-VbA" secondAttribute="trailing" id="L00-t6-feh"/>
+                            <constraint firstItem="O9w-Gj-i97" firstAttribute="top" secondItem="d2N-V0-eaZ" secondAttribute="bottom" constant="20" id="MHp-yk-1jz"/>
                             <constraint firstItem="GwI-bZ-u6O" firstAttribute="leading" secondItem="O3K-qz-Ywi" secondAttribute="trailing" id="NCi-bj-sWK"/>
                             <constraint firstItem="O3K-qz-Ywi" firstAttribute="centerY" secondItem="tOX-TZ-VbA" secondAttribute="centerY" id="PJs-Ub-vM9"/>
                             <constraint firstItem="5ah-wD-MN0" firstAttribute="centerY" secondItem="1XX-ET-gEI" secondAttribute="centerY" id="U0j-56-Y8T"/>
@@ -402,16 +419,20 @@
                             <constraint firstAttribute="trailing" secondItem="WA5-jl-MvX" secondAttribute="trailing" constant="-2" id="rJJ-Co-JUp"/>
                             <constraint firstItem="O3K-qz-Ywi" firstAttribute="height" secondItem="nFK-yT-wAo" secondAttribute="height" id="uhf-Qe-SG9"/>
                             <constraint firstItem="Rc1-b7-nTy" firstAttribute="top" secondItem="d2N-V0-eaZ" secondAttribute="bottom" constant="20" id="waq-3c-o6G"/>
+                            <constraint firstAttribute="centerX" secondItem="O9w-Gj-i97" secondAttribute="centerX" constant="-2" id="whZ-kk-wgI"/>
                             <constraint firstItem="fdy-TD-i7L" firstAttribute="leading" secondItem="r8W-vQ-OAE" secondAttribute="trailing" id="ztw-6t-ecA"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Q7h-Jv-hTJ"/>
                     <connections>
+                        <outlet property="createButton" destination="O9w-Gj-i97" id="GJS-a4-CUZ"/>
+                        <outlet property="createDerivativeSampleButton" destination="Rc1-b7-nTy" id="jwp-ZJ-vI7"/>
                         <outlet property="genLabel" destination="tOX-TZ-VbA" id="4T2-Rb-mMD"/>
                         <outlet property="hapLabel" destination="GwI-bZ-u6O" id="UlD-Ix-Feu"/>
                         <outlet property="locationButton" destination="Mcx-xY-K1P" id="bur-2s-hBD"/>
                         <outlet property="ngsLabel" destination="5ah-wD-MN0" id="hut-5t-D1b"/>
                         <outlet property="pcrLabel" destination="fdy-TD-i7L" id="a3t-hs-zv7"/>
+                        <outlet property="saveButton" destination="qS0-Rb-DHm" id="ayS-8y-z5H"/>
                         <outlet property="sgrLabel" destination="jWy-A5-uxg" id="day-AK-d4r"/>
                         <outlet property="statePicker" destination="WA5-jl-MvX" id="Niw-66-LI6"/>
                         <outlet property="typeButton" destination="OiF-Db-GbG" id="uK0-Xc-jba"/>

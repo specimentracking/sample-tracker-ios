@@ -12,6 +12,11 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
+#ifdef DEBUG
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    [userDefaults setObject:@"19aa567c00c20e5de3e5f8d6e03e3fb1" forKey:SETTINGS_API_KEY];
+    [userDefaults setObject:@"f2db41e1fa331b3e" forKey:SETTINGS_PROJECT_ID];
+#endif
     
     return YES;
 }

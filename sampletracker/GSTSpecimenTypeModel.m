@@ -11,7 +11,7 @@
 @implementation GSTSpecimenTypeModel
 
 - (instancetype)initWithIdentifier:(NSString *)typeIdentifier {
-    if (typeIdentifier) {
+    if (typeIdentifier && ![typeIdentifier isKindOfClass:[NSNull class]]) {
         self = [super init];
         if (self) {
             [[typeIdentifier componentsSeparatedByString:@"-"] enumerateObjectsUsingBlock:^(NSString *string, NSUInteger idx, BOOL *stop) {

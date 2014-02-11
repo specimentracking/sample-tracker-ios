@@ -24,6 +24,10 @@
 @property (weak, nonatomic) IBOutlet UILabel *hapLabel;
 @property (weak, nonatomic) IBOutlet UILabel *pcrLabel;
 
+@property (weak, nonatomic) IBOutlet UIButton *createDerivativeSampleButton;
+@property (weak, nonatomic) IBOutlet UIButton *saveButton;
+
+@property (weak, nonatomic) IBOutlet UIButton *createButton;
 
 
 @end
@@ -45,12 +49,18 @@
         self.genLabel.hidden = YES;
         self.hapLabel.hidden = YES;
         self.pcrLabel.hidden = YES;
+        self.createDerivativeSampleButton.hidden = YES;
+        self.saveButton.hidden = YES;
+        self.createButton.hidden = NO;
     } else {
         self.ngsLabel.textColor = self.specimen.ngsSegFlag?[UIColor greenColor]:[UIColor blackColor];
         self.sgrLabel.textColor = self.specimen.sangerSeqFlag?[UIColor greenColor]:[UIColor blackColor];
         self.genLabel.textColor = self.specimen.genotypeFlag?[UIColor greenColor]:[UIColor blackColor];
         self.hapLabel.textColor = self.specimen.haplotypeFlag?[UIColor greenColor]:[UIColor blackColor];
         self.pcrLabel.textColor = self.specimen.ddPcrFlag?[UIColor greenColor]:[UIColor blackColor];
+        self.createDerivativeSampleButton.hidden = NO;
+        self.saveButton.hidden = NO;
+        self.createButton.hidden = YES;
     }
     
     if (self.specimen.location) {
@@ -74,7 +84,19 @@
     }
 }
 
-#pragma mark - Auxiliary
+#pragma mark - Actions
+
+- (IBAction)patchSpecimen:(id)sender {
+#warning TODO send patch
+}
+
+- (IBAction)createDerivate:(id)sender {
+#warning TODO start scanner with this specimen as a parent
+}
+
+- (IBAction)createSpecimen:(id)sender {
+#warning TODO post new specimen
+}
 
 #pragma mark - Location picker
 
@@ -86,7 +108,7 @@
 }
 
 - (void)typePicker:(GSTTypePickerViewController *)picker didPickType:(GSTSpecimenTypeModel *)type {
-    [[NSUserDefaults standardUserDefaults] setObject:type.typeIdentifier forKey:SETTINGS_LAST_TYPE];
+//    [[NSUserDefaults standardUserDefaults] setObject:type.typeIdentifier forKey:SETTINGS_LAST_TYPE];
     self.specimen.type = type;
     [self.typeButton setTitle:type.description forState:UIControlStateNormal];
     [self.navigationController popViewControllerAnimated:YES];

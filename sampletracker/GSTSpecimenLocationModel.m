@@ -11,7 +11,7 @@
 @implementation GSTSpecimenLocationModel
 
 - (instancetype)initWithIdentifier:(NSString *)locationIdentifier {
-    if (locationIdentifier) {
+    if (locationIdentifier && ![locationIdentifier isKindOfClass:[NSNull class]]) {
         self = [super init];
         if (self) {
             for (NSString *locationComponent in [locationIdentifier componentsSeparatedByString:@"-"]) {
