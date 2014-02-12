@@ -27,8 +27,8 @@ typedef NS_ENUM (NSInteger, GSTSpecimenState) {
 @property (nonatomic, strong) NSString *barCode;
 @property (nonatomic, strong) NSString *projectId;
 
-@property (nonatomic, assign) GSTSpecimenTypeModel *derivate;
-@property (nonatomic, strong) GSTSpecimenTypeModel *parent;
+@property (nonatomic, assign) GSTSpecimenModel *derivate;
+@property (nonatomic, strong) GSTSpecimenModel *parent;
 
 //Sample data
 @property (nonatomic, strong) NSString *parentId;
@@ -52,5 +52,7 @@ typedef NS_ENUM (NSInteger, GSTSpecimenState) {
 @property (nonatomic, assign) BOOL ddPcrFlag;
 
 + (NSArray *)stateMap;
+
+- (BOOL)isValidForPost;
 
 @end

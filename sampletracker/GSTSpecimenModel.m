@@ -26,4 +26,8 @@
     self.state = [[GSTSpecimenModel stateMap] indexOfObject:stateString];
 }
 
+- (BOOL)isValidForPost {
+    return self.location && self.type;
+}
+
 @end

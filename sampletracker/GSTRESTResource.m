@@ -49,6 +49,9 @@
 - (void)startHTTPRequestWithMethod:(kHTTPMethod)method params:(NSDictionary *)params jsonBody:(id)jsonObject {
     [[NSNotificationCenter defaultCenter] removeObserver:self];
     self.canceled = NO;
+    params = [params mutableCopy];
+    
+    [params setValue:[[NSUserDefaults standardUserDefaults] objectForKey:SETTINGS_API_KEY] forKey:@"key"];
     
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:self.resourceURL];
     

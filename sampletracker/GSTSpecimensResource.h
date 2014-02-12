@@ -12,4 +12,7 @@
 
 - (void)startCheckSpecimen:(NSString *)barcodeString;
 
+- (void)startPostNewSpecimen:(GSTSpecimenModel *)specimen;
+
+
 @end

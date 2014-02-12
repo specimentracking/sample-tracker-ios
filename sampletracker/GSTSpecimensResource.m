@@ -8,6 +8,12 @@
 
 #import "GSTSpecimensResource.h"
 
+@interface GSTSpecimensResource ()
+
+@property (nonatomic, retain) GSTSpecimenModel *specimen;
+
+@end
+
 @implementation GSTSpecimensResource
 
 //- (NSURL *)resourceURL {
@@ -17,8 +23,24 @@
 - (void)startCheckSpecimen:(NSString *)barcodeString {
     NSString *urlString = [GST_BASE_URL stringByAppendingFormat:@"projects/%@/check", [[NSUserDefaults standardUserDefaults] objectForKey:SETTINGS_PROJECT_ID]];
     self.resourceURL = [NSURL URLWithString:urlString];
-    NSDictionary *params = [NSDictionary dictionaryWithObjectsAndKeys:barcodeString, @"barcode", [[NSUserDefaults standardUserDefaults] objectForKey:SETTINGS_API_KEY], @"key", nil];
-    [self startGetRequestWithParams:params];
+    self.specimen = [[GSTSpecimenModel alloc] init];
+    self.specimen.barCode = barcodeString;
+    [self startGetRequestWithParams:[NSDictionary dictionaryWithObject:barcodeString forKey:@"barcode"]];
+}
+
+- (void)startPostNewSpecimen:(GSTSpecimenModel *)specimen {
+    NSString *urlString = [GST_BASE_URL stringByAppendingFormat:@"projects/%@/specimens/%@", [[NSUserDefaults standardUserDefaults] objectForKey:SETTINGS_PROJECT_ID], specimen.specimenId];
+    self.resourceURL = [NSURL URLWithString:urlString];
+    NSMutableDictionary *params = [NSMutableDictionary dictionary];
+    [params setObject:specimen.barCode forKey:@"barcode"];
+    [params setObject:specimen.stateString forKey:@"state"];
+    [params setObject:specimen.type.typeIdentifier forKey:@"type"];
+    [params setObject:specimen.barCode forKey:@"barcode"];
+    [params setObject:specimen.location.locationIdentifier forKey:@"location"];
+    if (specimen.parent) {
+        [params setObject:specimen.parent.specimenId forKey:@"parent_id"];
+    }
+    [self startPostRequestWithParams:params];
 }
 
 - (id)processJSONObject:(id)JSONObject {
@@ -27,7 +49,7 @@
         NSInteger errCode = [JSONObject[@"err_code"] integerValue];
         switch (errCode) {
             case 404001:
-                specimen = nil;
+                specimen = self.specimen;
                 break;
             default:
                 break;
@@ -58,7 +80,6 @@
         specimen.stateString = JSONObject[@"sample_data"][@"state"];
         specimen.type = [[GSTSpecimenTypeModel alloc] initWithIdentifier:JSONObject[@"sample_data"][@"type"]];
     }
-    
     return specimen;
 }
 

@@ -10,6 +10,7 @@
 #import "GSTLocationPickerViewController.h"
 #import "GSTTypePickerViewController.h"
 #import "GSTSpecimenLocationModel.h"
+#import "GSTSpecimensResource.h"
 
 @interface GSTSpecimenViewController ()
 
@@ -29,6 +30,7 @@
 
 @property (weak, nonatomic) IBOutlet UIButton *createButton;
 
+@property (nonatomic, retain) GSTSpecimensResource *specimenResource;
 
 @end
 
@@ -39,8 +41,7 @@
 
     self.title = @"Specimen";
     
-    if (!self.specimen) {
-        self.specimen = [[GSTSpecimenModel alloc] init];
+    if (!self.specimen.specimenId) {
         self.specimen.state = GSTSpecimenStateNew;
         self.specimen.location = [[GSTSpecimenLocationModel alloc] initWithIdentifier:[[NSUserDefaults standardUserDefaults] objectForKey:SETTINGS_LAST_LOCATION]];
         self.specimen.type = [[GSTSpecimenTypeModel alloc] initWithIdentifier:[[NSUserDefaults standardUserDefaults] objectForKey:SETTINGS_LAST_TYPE]];
@@ -95,7 +96,13 @@
 }
 
 - (IBAction)createSpecimen:(id)sender {
-#warning TODO post new specimen
+    if ([self.specimen isValidForPost]) {
+        self.specimenResource = [[GSTSpecimensResource alloc] initWithDelegate:self];
+        [self.specimenResource startPostNewSpecimen:self.specimen];
+    } else {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Please fill in all parameters." message:nil delegate:nil cancelButtonTitle:@"Close" otherButtonTitles: nil];
+        [alert show];
+    }
 }
 
 #pragma mark - Location picker
@@ -130,6 +137,20 @@
 
 - (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component {
     self.specimen.state = row;
+}
+
+#pragma mark - REST Delegate
+
+- (void)request:(GSTRESTResource *)request didReceiveHeader:(NSDictionary *)header statusCode:(NSInteger)statusCode {
+    
+}
+
+- (void)request:(GSTRESTResource *)request didFailLoadingWithError:(NSError *)error {
+    
+}
+
+- (void)request:(GSTRESTResource *)request didFinishWithData:(id)resourceData {
+
 }
 
 @end
