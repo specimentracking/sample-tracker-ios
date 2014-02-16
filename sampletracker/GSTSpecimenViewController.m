@@ -188,7 +188,7 @@
     [self enableForm:YES];
     if ([resourceData isKindOfClass:[NSError class]]) {
         NSError *error = resourceData;
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Request Error" message:[error.userInfo[@"msg"] stringByAppendingFormat:@"(%i)", error.code] delegate:nil cancelButtonTitle:@"Close" otherButtonTitles:nil];
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Request Error" message:[error.userInfo[@"msg"] stringByAppendingFormat:@"(%li)", (long)error.code] delegate:nil cancelButtonTitle:@"Close" otherButtonTitles:nil];
         [alert show];
     } else {
         GSTSpecimenModel *newSpecimen = resourceData;
