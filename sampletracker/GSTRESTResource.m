@@ -1,4 +1,4 @@
-//
+        //
 //  SBPRESTResource.m
 //  sampletracker
 //
@@ -42,6 +42,10 @@
     [self startHTTPRequestWithMethod:kHTTPMethodPost params:params jsonBody:nil];
 }
 
+- (void)startPatchRequestWithParams:(NSDictionary *)params {
+    [self startHTTPRequestWithMethod:kHTTPMethodPatch params:params jsonBody:nil];
+}
+
 - (void)startPostRequestWithParams:(NSDictionary *)params jsonBody:(id)jsonObject{
     [self startHTTPRequestWithMethod:kHTTPMethodPostWithQuery params:params jsonBody:jsonObject];
 }
@@ -57,7 +61,8 @@
     
     // construct request url
     switch (method) {
-        case kHTTPMethodGet: {
+        case kHTTPMethodGet:
+        case kHTTPMethodPatch: {
             NSURL *requestURL;
             NSMutableString *urlString = [[NSMutableString alloc] init];
             for (NSString *key in params.allKeys) {
@@ -74,7 +79,7 @@
             requestURL = [NSURL URLWithString:fullURLString];
             request = [NSMutableURLRequest requestWithURL:requestURL];
 
-            [request setHTTPMethod:@"GET"];
+            [request setHTTPMethod:(method==kHTTPMethodGet)?@"GET":@"PATCH"];
             [request setValue:@"application/x-www-form-urlencoded" forHTTPHeaderField:@"Content-Type"];
         } break;
         case kHTTPMethodPost: {

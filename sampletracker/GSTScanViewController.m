@@ -27,7 +27,7 @@
     double delayInSeconds = 2.0;
     dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delayInSeconds * NSEC_PER_SEC));
     dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
-        [self.delegate scanner:self didScanTest:@"0120109"];
+        [self.delegate scanner:self didScanTest:@"0120108"];
     });
     return;
 #endif
@@ -44,7 +44,7 @@
 
 - (void)captureResult:(ZXCapture *)capture result:(ZXResult *)result {
     @synchronized(self) {        
-        if (result && !self.captured && result.barcodeFormat == kBarcodeFormatAztec) {
+        if (result && !self.captured) {
             self.captured = YES;
             [self.delegate scanner:self didScanTest:result.text];
             [self.capture stop];

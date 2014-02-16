@@ -14,5 +14,7 @@
 
 - (void)startPostNewSpecimen:(GSTSpecimenModel *)specimen;
 
+- (void)startPatchUpdateSpecimen:(GSTSpecimenModel *)specimen;
+
 
 @end

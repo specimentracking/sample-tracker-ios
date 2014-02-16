@@ -1,4 +1,4 @@
-//
+    //
 //  GSTSpecimensResource.m
 //  sampletracker
 //
@@ -29,7 +29,7 @@
 }
 
 - (void)startPostNewSpecimen:(GSTSpecimenModel *)specimen {
-    NSString *urlString = [GST_BASE_URL stringByAppendingFormat:@"projects/%@/specimens/%@", [[NSUserDefaults standardUserDefaults] objectForKey:SETTINGS_PROJECT_ID], specimen.specimenId];
+    NSString *urlString = [GST_BASE_URL stringByAppendingFormat:@"projects/%@/specimens", [[NSUserDefaults standardUserDefaults] objectForKey:SETTINGS_PROJECT_ID]];
     self.resourceURL = [NSURL URLWithString:urlString];
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
     [params setObject:specimen.barCode forKey:@"barcode"];
@@ -43,11 +43,27 @@
     [self startPostRequestWithParams:params];
 }
 
+- (void)startPatchUpdateSpecimen:(GSTSpecimenModel *)specimen {
+    NSString *urlString = [GST_BASE_URL stringByAppendingFormat:@"projects/%@/specimens/%@", [[NSUserDefaults standardUserDefaults] objectForKey:SETTINGS_PROJECT_ID], specimen.specimenId];
+    self.resourceURL = [NSURL URLWithString:urlString];
+    NSMutableDictionary *params = [NSMutableDictionary dictionary];
+    [params setObject:specimen.barCode forKey:@"barcode"];
+    [params setObject:specimen.stateString forKey:@"state"];
+    [params setObject:specimen.type.typeIdentifier forKey:@"type"];
+    [params setObject:specimen.barCode forKey:@"barcode"];
+    [params setObject:specimen.location.locationIdentifier forKey:@"location"];
+    if (specimen.parent) {
+        [params setObject:specimen.parent.specimenId forKey:@"parent_id"];
+    }
+    [self startPatchRequestWithParams:params];
+}
+
 - (id)processJSONObject:(id)JSONObject {
     GSTSpecimenModel *specimen;
     if (JSONObject[@"err_code"]) {
-        NSInteger errCode = [JSONObject[@"err_code"] integerValue];
-        switch (errCode) {
+        NSError *error = [[NSError alloc] initWithDomain:kGSTBusinessErrorDomain code:[JSONObject[@"err_code"] integerValue] userInfo:@{@"msg":JSONObject[@"err_msg"]}];
+        specimen = (id)error;
+        switch (error.code) {
             case 404001:
                 specimen = self.specimen;
                 break;
@@ -64,20 +80,20 @@
         
         specimen.dateOfCollection = [GSTDateUtility dateWithShortString:JSONObject[@"sample_data"][@"date_of_collection"]];
         specimen.dateSend = [GSTDateUtility dateWithShortString:JSONObject[@"sample_data"][@"date_sent"]];
-        specimen.ddPcrFlag = [JSONObject[@"sample_data"][@"dd_pcr_flag"] isEqualToString:@"true"];
+        specimen.ddPcrFlag = [JSONObject[@"sample_data"][@"dd_pcr_flag"] isKindOfClass:[NSString class]] && [JSONObject[@"sample_data"][@"dd_pcr_flag"] isEqualToString:@"true"];
         specimen.family = JSONObject[@"sample_data"][@"family"];
-        specimen.genotypeFlag = [JSONObject[@"sample_data"][@"genotype_flag"] isEqualToString:@"true"];
-        specimen.haplotypeFlag = [JSONObject[@"sample_data"][@"haplotype_flag"] isEqualToString:@"true"];
-        specimen.location = [[GSTSpecimenLocationModel alloc] initWithIdentifier:JSONObject[@"sample_data"][@"location"]];
-        specimen.ngsSegFlag = [JSONObject[@"sample_data"][@"ngs_seg_flag"] isEqualToString:@"true"];
+        specimen.genotypeFlag = [JSONObject[@"sample_data"][@"genotype_flag"] isKindOfClass:[NSString class]] && [JSONObject[@"sample_data"][@"genotype_flag"] isEqualToString:@"true"];
+        specimen.haplotypeFlag = [JSONObject[@"sample_data"][@"haplotype_flag"] isKindOfClass:[NSString class]] && [JSONObject[@"sample_data"][@"haplotype_flag"] isEqualToString:@"true"];
+        specimen.ngsSegFlag = [JSONObject[@"sample_data"][@"ngs_seg_flag"] isKindOfClass:[NSString class]] && [JSONObject[@"sample_data"][@"ngs_seg_flag"] isEqualToString:@"true"];
         specimen.note = JSONObject[@"sample_data"][@"note"];
         specimen.parentId = JSONObject[@"sample_data"][@"parent_id"];
         specimen.participantDob = [GSTDateUtility dateWithShortString:JSONObject[@"sample_data"][@"participant_dob"]];
         specimen.participantId = JSONObject[@"sample_data"][@"participant_id"];
         specimen.participantRelationship = JSONObject[@"sample_data"][@"participant_relationship"];
-        specimen.sangerSeqFlag = [JSONObject[@"sample_data"][@"sanger_seq_flag"] isEqualToString:@"true"];
+        specimen.sangerSeqFlag = [JSONObject[@"sample_data"][@"sanger_seq_flag"] isKindOfClass:[NSString class]] && [JSONObject[@"sample_data"][@"sanger_seq_flag"] isEqualToString:@"true"];
         specimen.sex = JSONObject[@"sample_data"][@"sex"];
         specimen.stateString = JSONObject[@"sample_data"][@"state"];
+        specimen.location = [[GSTSpecimenLocationModel alloc] initWithIdentifier:JSONObject[@"sample_data"][@"location"]];
         specimen.type = [[GSTSpecimenTypeModel alloc] initWithIdentifier:JSONObject[@"sample_data"][@"type"]];
     }
     return specimen;

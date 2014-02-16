@@ -49,7 +49,14 @@
 }
 
 - (NSString *)typeIdentifier {
-    return [NSString stringWithFormat:@"%@-%@-%@", self.type1, self.type2, self.type3];
+    NSMutableString *identifier = [self.type1 mutableCopy];
+    if (self.type2) {
+        [identifier appendFormat:@"-%@", self.type2];
+        if (self.type3) {
+            [identifier appendFormat:@"-%@", self.type3];
+        }
+    }
+    return identifier;
 }
 
 - (NSString *)description {

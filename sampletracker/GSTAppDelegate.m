@@ -7,10 +7,13 @@
 //
 
 #import "GSTAppDelegate.h"
+#import <Crashlytics/Crashlytics.h>
 
 @implementation GSTAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    
+    [Crashlytics startWithAPIKey:@"e1e841444e029d53bae81c515d6a45651ab4ad20"];
     
 #ifdef DEBUG
     NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];

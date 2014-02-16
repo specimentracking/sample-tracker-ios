@@ -24,6 +24,7 @@ typedef NS_ENUM(NSInteger, kHTTPMethod) {
     kHTTPMethodUnknown,
     kHTTPMethodGet,
     kHTTPMethodPost,
+    kHTTPMethodPatch,
     kHTTPMethodPostWithQuery
 };
 
@@ -37,6 +38,7 @@ typedef NS_ENUM(NSInteger, kHTTPMethod) {
 
 // Request
 - (void)startGetRequestWithParams:(NSDictionary *)params;
+- (void)startPatchRequestWithParams:(NSDictionary *)params;
 - (void)startPostRequestWithParams:(NSDictionary *)params;
 - (void)startPostRequestWithParams:(NSDictionary *)params jsonBody:(id)jsonObject;
 - (void)startHTTPRequestWithMethod:(kHTTPMethod)method params:(NSDictionary *)params jsonBody:(id)jsonObject;

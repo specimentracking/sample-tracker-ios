@@ -23,3 +23,5 @@
 #define SETTINGS_PROJECT_ID @"kSettingsProjectId"
 #define SETTINGS_LAST_LOCATION @"kSettingsLastLocation"
 #define SETTINGS_LAST_TYPE @"kSettingsLastType"
+
+#define kGSTBusinessErrorDomain @"kGSTBusinessErrorDomain"

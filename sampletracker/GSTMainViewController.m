@@ -15,6 +15,9 @@
 
 @property (nonatomic, strong) GSTSpecimensResource *specimensResource;
 
+@property (weak, nonatomic) IBOutlet UIButton *settingsButton;
+@property (weak, nonatomic) IBOutlet UIButton *scanButton;
+
 @end
 
 @implementation GSTMainViewController
@@ -57,27 +60,42 @@
     
 }
 
+#pragma mark - Auxiliary
+
+- (void)enableForm:(BOOL)enable {
+    self.settingsButton.enabled = enable;
+    self.scanButton.enabled = enable;
+}
+
 #pragma mark - Scan delegate
 
 - (void)scanner:(GSTScanViewController *)scanner didScanTest:(NSString *)result {
-    [self.navigationController popViewControllerAnimated:NO];
-    
     self.specimensResource = [[GSTSpecimensResource alloc] initWithDelegate:self];
     [self.specimensResource startCheckSpecimen:result];
 }
 
 #pragma mark - REST Delegate
 
+- (void)requestDidStart:(GSTRESTResource *)request {
+    
+}
+
 - (void)request:(GSTRESTResource *)request didReceiveHeader:(NSDictionary *)header statusCode:(NSInteger)statusCode {
     
 }
 
 - (void)request:(GSTRESTResource *)request didFailLoadingWithError:(NSError *)error {
-    
 }
 
 - (void)request:(GSTRESTResource *)request didFinishWithData:(id)resourceData {
-    [self performSegueWithIdentifier:@"openSpecimen" sender:resourceData];
+    if ([resourceData isKindOfClass:[NSError class]]) {
+        NSError *error = resourceData;
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Request Error" message:error.userInfo[@"err_msg"] delegate:nil cancelButtonTitle:@"Close" otherButtonTitles: nil];
+        [alert show];
+    } else {
+        [self.navigationController popViewControllerAnimated:NO];
+        [self performSegueWithIdentifier:@"openSpecimen" sender:resourceData];
+    }
 }
 
 
