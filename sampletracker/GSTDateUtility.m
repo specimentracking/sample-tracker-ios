@@ -1,9 +1,9 @@
 //
 //  JBDateUtility.m
-//  Jaybird
+//  sampletracker
 //
 //  Created by Ondřej Fabián on 06/07/2013.
-//  Copyright (c) 2013 Fabocorp. All rights reserved.
+//  Copyright (c) 2013 Galaxy. All rights reserved.
 //
 
 #import "GSTDateUtility.h"

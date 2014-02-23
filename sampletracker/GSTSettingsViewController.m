@@ -7,11 +7,13 @@
 //
 
 #import "GSTSettingsViewController.h"
+#import "GSTRESTResource.h"
 
 @interface GSTSettingsViewController ()
 
 @property (weak, nonatomic) IBOutlet UITextField *apiTextField;
 @property (weak, nonatomic) IBOutlet UITextField *pidTextField;
+@property (weak, nonatomic) IBOutlet UITextField *urlTextField;
 
 @end
 
@@ -30,6 +32,7 @@
     NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
     self.apiTextField.text = [userDefaults objectForKey:SETTINGS_API_KEY];
     self.pidTextField.text = [userDefaults objectForKey:SETTINGS_PROJECT_ID];
+    self.urlTextField.text = GST_BASE_URL;
 }
 
 #pragma mark - Actions
@@ -38,6 +41,7 @@
     NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
     [userDefaults setObject:self.apiTextField.text forKey:SETTINGS_API_KEY];
     [userDefaults setObject:self.pidTextField.text forKey:SETTINGS_PROJECT_ID];
+    [userDefaults setObject:self.urlTextField.text forKey:SETTINGS_BASE_URL];
     [self.navigationController popViewControllerAnimated:YES];
 }
 

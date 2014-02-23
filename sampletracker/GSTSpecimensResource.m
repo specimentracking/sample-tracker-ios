@@ -16,10 +16,6 @@
 
 @implementation GSTSpecimensResource
 
-//- (NSURL *)resourceURL {
-//    return [NSURL URLWithString:[GST_BASE_URL stringByAppendingFormat:@"projects/%@/specimens/", [[NSUserDefaults standardUserDefaults] objectForKey:SETTINGS_PROJECT_ID]]];
-//}
-
 - (void)startCheckSpecimen:(NSString *)barcodeString {
     NSString *urlString = [GST_BASE_URL stringByAppendingFormat:@"projects/%@/check", [[NSUserDefaults standardUserDefaults] objectForKey:SETTINGS_PROJECT_ID]];
     self.resourceURL = [NSURL URLWithString:urlString];
@@ -34,9 +30,13 @@
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
     [params setObject:specimen.barCode forKey:@"barcode"];
     [params setObject:specimen.stateString forKey:@"state"];
-    [params setObject:specimen.type.typeIdentifier forKey:@"type"];
     [params setObject:specimen.barCode forKey:@"barcode"];
-    [params setObject:specimen.location.locationIdentifier forKey:@"location"];
+    if (specimen.type) {
+        [params setObject:specimen.type.typeIdentifier forKey:@"type"];
+    }
+    if (specimen.location) {
+        [params setObject:specimen.location.locationIdentifier forKey:@"location"];
+    }
     if (specimen.parent) {
         [params setObject:specimen.parent.specimenId forKey:@"parent_id"];
     }

@@ -9,15 +9,15 @@
 #import "GSTRESTResourceDelegate.h"
 
 #ifdef ENV_PROD
-    #define GST_BASE_URL @"https://gateway.developer.telekom.com/plone/telefoniecenter/rest/v1/"
+    #define GST_BASE_URL [[[NSUserDefaults standardUserDefaults] objectForKey:SETTINGS_BASE_URL] notEmpty]?[[NSUserDefaults standardUserDefaults] objectForKey:SETTINGS_BASE_URL]:@"https://gateway.developer.telekom.com/plone/telefoniecenter/rest/v1/"
 #endif
 
 #ifdef ENV_TEST
-    #define GST_BASE_URL @"http://samples.galaxyproject.org/api/"
+    #define GST_BASE_URL [[[NSUserDefaults standardUserDefaults] objectForKey:SETTINGS_BASE_URL] notEmpty]?[[NSUserDefaults standardUserDefaults] objectForKey:SETTINGS_BASE_URL]:@"http://samples.galaxyproject.org/api/"
 #endif
 
 #ifdef ENV_MOCK
-    #define GST_BASE_URL @"http://galaxysampletracking.apiary.io/api/"
+    #define GST_BASE_URL [[[NSUserDefaults standardUserDefaults] objectForKey:SETTINGS_BASE_URL] notEmpty]?[[NSUserDefaults standardUserDefaults] objectForKey:SETTINGS_BASE_URL]:@"http://galaxysampletracking.apiary.io/api/"
 #endif
 
 typedef NS_ENUM(NSInteger, kHTTPMethod) {

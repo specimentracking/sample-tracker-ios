@@ -18,9 +18,11 @@
 #import "GSTSpecimenModel.h"
 #import "GSTRESTResourceDelegate.h"
 #import "GSTDateUtility.h"
+#import "NSString+Emptiness.h"
 
 #define SETTINGS_API_KEY @"kSettingsApiKey"
 #define SETTINGS_PROJECT_ID @"kSettingsProjectId"
+#define SETTINGS_BASE_URL @"kSettingsBaseUrl"
 #define SETTINGS_LAST_LOCATION @"kSettingsLastLocation"
 #define SETTINGS_LAST_TYPE @"kSettingsLastType"
 

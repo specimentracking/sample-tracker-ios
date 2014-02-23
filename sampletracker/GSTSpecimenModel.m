@@ -27,7 +27,8 @@
 }
 
 - (BOOL)isValidForPost {
-    return self.location && self.type;
+    return YES;
+//    return self.location && self.type;
 }
 
 @end

@@ -199,6 +199,7 @@
                             <constraint firstItem="d3N-TI-fcW" firstAttribute="width" secondItem="1ld-86-S9Q" secondAttribute="width" id="m71-WX-RUN"/>
                             <constraint firstItem="zvu-tL-IEU" firstAttribute="leading" secondItem="enY-g0-08a" secondAttribute="trailing" id="nCr-JY-SkZ"/>
                             <constraint firstAttribute="trailing" secondItem="V00-mA-Sid" secondAttribute="trailing" constant="20" id="qJh-kF-DnH"/>
+                            <constraint firstItem="tSD-XW-ScP" firstAttribute="top" secondItem="Rmx-fA-AMb" secondAttribute="bottom" constant="16" id="qLn-o6-YBR"/>
                             <constraint firstItem="1ld-86-S9Q" firstAttribute="centerX" secondItem="d3N-TI-fcW" secondAttribute="centerX" id="w1z-8L-a5n"/>
                             <constraint firstItem="enY-g0-08a" firstAttribute="baseline" secondItem="mfL-aW-xVn" secondAttribute="baseline" id="yhX-4U-M4H"/>
                             <constraint firstItem="Ffc-m9-7m5" firstAttribute="baseline" secondItem="4He-Rl-Piq" secondAttribute="baseline" id="zgv-vZ-ySn"/>
@@ -473,7 +474,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hzr-Cg-Ivo">
-                                <rect key="frame" x="143" y="174" width="34" height="30"/>
+                                <rect key="frame" x="143" y="212" width="34" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Save">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -506,23 +507,36 @@
                                     <outlet property="delegate" destination="rWU-yK-X4D" id="1sE-25-y3I"/>
                                 </connections>
                             </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="http://samples.galaxyproject.org/api/" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="jrg-Gl-axZ">
+                                <rect key="frame" x="20" y="162" width="280" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" returnKeyType="done"/>
+                                <connections>
+                                    <outlet property="delegate" destination="rWU-yK-X4D" id="aDT-4h-lgU"/>
+                                </connections>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Hzr-Cg-Ivo" firstAttribute="top" secondItem="K0J-Oq-qOx" secondAttribute="bottom" constant="20" id="24r-JK-NDn"/>
                             <constraint firstItem="Xfx-ts-KHO" firstAttribute="leading" secondItem="Lt5-iB-OXU" secondAttribute="leading" constant="20" id="6Fs-uL-PaY"/>
                             <constraint firstItem="Xfx-ts-KHO" firstAttribute="trailing" secondItem="K0J-Oq-qOx" secondAttribute="trailing" id="ESh-0f-cdP"/>
                             <constraint firstAttribute="centerX" secondItem="Hzr-Cg-Ivo" secondAttribute="centerX" id="NeB-cY-kaw"/>
                             <constraint firstItem="Xfx-ts-KHO" firstAttribute="leading" secondItem="K0J-Oq-qOx" secondAttribute="leading" id="Tze-34-xV1"/>
+                            <constraint firstItem="Hzr-Cg-Ivo" firstAttribute="top" secondItem="jrg-Gl-axZ" secondAttribute="bottom" constant="20" id="av3-w6-Btc"/>
+                            <constraint firstItem="jrg-Gl-axZ" firstAttribute="trailing" secondItem="K0J-Oq-qOx" secondAttribute="trailing" id="bwo-Fk-JzK"/>
+                            <constraint firstItem="jrg-Gl-axZ" firstAttribute="top" secondItem="K0J-Oq-qOx" secondAttribute="bottom" constant="8" id="kK2-af-lnb"/>
                             <constraint firstItem="Xfx-ts-KHO" firstAttribute="top" secondItem="kes-lq-zJy" secondAttribute="bottom" constant="20" id="krv-DU-fDC"/>
                             <constraint firstItem="K0J-Oq-qOx" firstAttribute="top" secondItem="Xfx-ts-KHO" secondAttribute="bottom" constant="10" id="pX4-fX-vIx"/>
                             <constraint firstAttribute="trailing" secondItem="Xfx-ts-KHO" secondAttribute="trailing" constant="20" id="s1Q-jV-slO"/>
+                            <constraint firstItem="jrg-Gl-axZ" firstAttribute="leading" secondItem="K0J-Oq-qOx" secondAttribute="leading" id="yYD-3M-OJ7"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="uWD-bR-Klk"/>
                     <connections>
                         <outlet property="apiTextField" destination="Xfx-ts-KHO" id="foc-0j-Hnz"/>
                         <outlet property="pidTextField" destination="K0J-Oq-qOx" id="bfY-zZ-nCx"/>
+                        <outlet property="urlTextField" destination="jrg-Gl-axZ" id="I3H-PV-RJY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ice-Ol-fJz" userLabel="First Responder" sceneMemberID="firstResponder"/>
