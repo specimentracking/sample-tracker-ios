@@ -54,13 +54,6 @@
 			remoteGlobalIDString = 25403CC4166A96FA00E13304;
 			remoteInfo = "Unit Tests iOS";
 		};
-		EDA7612D18AA960C0097EF42 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = EDA7611F18AA96060097EF42 /* ZXingObjC.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 024958781898641B003D4E6A;
-			remoteInfo = "Blackbox Tests iOS";
-		};
 		EDA7612F18AA960C0097EF42 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = EDA7611F18AA96060097EF42 /* ZXingObjC.xcodeproj */;
@@ -74,13 +67,6 @@
 			proxyType = 2;
 			remoteGlobalIDString = 25404178166AADAC00E13304;
 			remoteInfo = "Unit Tests OS X";
-		};
-		EDA7613318AA960C0097EF42 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = EDA7611F18AA96060097EF42 /* ZXingObjC.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 02D813F6189864C70081721D;
-			remoteInfo = "Blackbox Tests OS X";
 		};
 		EDA7613518AA960C0097EF42 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -361,10 +347,8 @@
 			children = (
 				EDA7612A18AA960C0097EF42 /* libZXingObjC-iOS.a */,
 				EDA7612C18AA960C0097EF42 /* Unit Tests iOS.octest */,
-				EDA7612E18AA960C0097EF42 /* ZXingObjCTests-iOS copy.octest */,
 				EDA7613018AA960C0097EF42 /* libZXingObjC-osx.a */,
 				EDA7613218AA960C0097EF42 /* Unit Tests OS X.octest */,
-				EDA7613418AA960C0097EF42 /* ZXingObjCTests-osx copy.octest */,
 				EDA7613618AA960C0097EF42 /* ZXingObjC.framework */,
 			);
 			name = Products;
@@ -437,15 +421,8 @@
 		EDA7612C18AA960C0097EF42 /* Unit Tests iOS.octest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
-			path = "Unit Tests iOS.octest";
+			path = "Unit Tests iOS.xctest";
 			remoteRef = EDA7612B18AA960C0097EF42 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		EDA7612E18AA960C0097EF42 /* ZXingObjCTests-iOS copy.octest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = "ZXingObjCTests-iOS copy.octest";
-			remoteRef = EDA7612D18AA960C0097EF42 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 		EDA7613018AA960C0097EF42 /* libZXingObjC-osx.a */ = {
@@ -458,15 +435,8 @@
 		EDA7613218AA960C0097EF42 /* Unit Tests OS X.octest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
-			path = "Unit Tests OS X.octest";
+			path = "Unit Tests OS X.xctest";
 			remoteRef = EDA7613118AA960C0097EF42 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		EDA7613418AA960C0097EF42 /* ZXingObjCTests-osx copy.octest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = "ZXingObjCTests-osx copy.octest";
-			remoteRef = EDA7613318AA960C0097EF42 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 		EDA7613618AA960C0097EF42 /* ZXingObjC.framework */ = {
