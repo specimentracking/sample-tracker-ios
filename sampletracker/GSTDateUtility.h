@@ -14,5 +14,6 @@
 + (NSDate *)dateWithShortString:(NSString *)dateString;
 + (NSString *)stringWithDate:(NSDate *)date;
 + (NSString *)readableStringWithDate:(NSDate *)date short:(BOOL)shortStyle;
++ (NSString *)readableStringWithDate:(NSDate *)date;
 
 @end

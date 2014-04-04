@@ -41,7 +41,7 @@ typedef NS_ENUM (NSInteger, GSTSpecimenState) {
 @property (nonatomic, strong) NSString *participantId;
 @property (nonatomic, strong) NSString *participantRelationship;
 @property (nonatomic, strong) NSDate *participantDob;
-@property (nonatomic, strong) NSDate *dateSend;
+@property (nonatomic, strong) NSDate *dateSent;
 @property (nonatomic, strong) NSDate *dateOfCollection;
 @property (nonatomic, strong) NSString *note;
 

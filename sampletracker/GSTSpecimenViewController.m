@@ -15,6 +15,8 @@
 
 @interface GSTSpecimenViewController ()
 
+@property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
+
 @property (weak, nonatomic) IBOutlet UIPickerView *statePicker;
 
 @property (weak, nonatomic) IBOutlet UIButton *locationButton;
@@ -46,6 +48,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self layoutOptionalDetails];
     [self setupForm];
 }
 
@@ -125,6 +128,69 @@
     [self.locationButton setTitle:self.specimen.location.description?self.specimen.location.description:@"Choose location" forState:UIControlStateNormal];
     [self.typeButton setTitle:self.specimen.type.description?self.specimen.type.description:@"Choose type" forState:UIControlStateNormal];
     [self.statePicker selectRow:self.specimen.state inComponent:0 animated:NO];
+}
+
+- (void)layoutOptionalDetails {
+    UIView *lastView = self.saveButton;
+    
+    NSMutableDictionary *optionalData = [NSMutableDictionary dictionary];
+    
+    if ([self.specimen.family notEmpty]) {
+        [optionalData setObject:self.specimen.family forKey:@"Family"];
+    }
+    if ([self.specimen.participantRelationship notEmpty]) {
+        [optionalData setObject:self.specimen.participantRelationship forKey:@"Relationship"];
+    }
+    if ([self.specimen.sex notEmpty]) {
+        [optionalData setObject:self.specimen.sex forKey:@"Sex"];
+    }
+    [optionalData setObject:[self.specimen.parentId notEmpty]?@"Yes":@"No" forKey:@"Is derivate"];
+    if (self.specimen.createTime) {
+        [optionalData setObject:[GSTDateUtility readableStringWithDate:self.specimen.createTime short:YES] forKey:@"Created"];
+    }
+    if (self.specimen.updateTime) {
+        [optionalData setObject:[GSTDateUtility readableStringWithDate:self.specimen.updateTime short:YES] forKey:@"Updated"];
+    }
+    if (self.specimen.dateSent) {
+        [optionalData setObject:[GSTDateUtility readableStringWithDate:self.specimen.dateSent] forKey:@"Sent"];
+    }
+    if (self.specimen.dateOfCollection) {
+        [optionalData setObject:[GSTDateUtility readableStringWithDate:self.specimen.dateOfCollection] forKey:@"Collected"];
+    }
+    if (self.specimen.participantDob) {
+        [optionalData setObject:[GSTDateUtility readableStringWithDate:self.specimen.participantDob] forKey:@"DOB"];
+    }
+    
+    for (NSString *title in [optionalData.allKeys sortedArrayUsingSelector:@selector(compare:)]) {
+        UILabel *titleLabel = [[UILabel alloc] init];
+        titleLabel.text = title;
+        titleLabel.translatesAutoresizingMaskIntoConstraints = NO;
+        [self.scrollView addSubview:titleLabel];
+        UILabel *valueLabel = [[UILabel alloc] init];
+        valueLabel.text = optionalData[title];
+        valueLabel.translatesAutoresizingMaskIntoConstraints = NO;
+        valueLabel.textColor = [UIColor darkGrayColor];
+        [self.scrollView addSubview:valueLabel];
+        [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-(20)-[titleLabel]-(>=20)-[valueLabel]-(20)-|" options:NSLayoutFormatAlignAllBaseline metrics:nil views:NSDictionaryOfVariableBindings(titleLabel, valueLabel)]];
+        [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[lastView]-(20)-[valueLabel]" options:0 metrics:nil views:NSDictionaryOfVariableBindings(lastView, valueLabel)]];
+        lastView = valueLabel;
+    }
+    
+    // Append note to the very end because it might be long
+    if ([self.specimen.note notEmpty]) {
+        [optionalData setObject:self.specimen.note forKey:@"Note"];
+        UILabel *valueLabel = [[UILabel alloc] init];
+        valueLabel.text = self.specimen.note;
+        valueLabel.numberOfLines = 0;
+        valueLabel.translatesAutoresizingMaskIntoConstraints = NO;
+        valueLabel.textColor = [UIColor darkGrayColor];
+        [self.scrollView addSubview:valueLabel];
+        [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-(20)-[valueLabel]-(20)-|" options:0 metrics:nil views:NSDictionaryOfVariableBindings(valueLabel)]];
+        [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[lastView]-(20)-[valueLabel]" options:0 metrics:nil views:NSDictionaryOfVariableBindings(lastView, valueLabel)]];
+        lastView = valueLabel;
+    }
+    
+    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[lastView]-(20)-|" options:0 metrics:nil views:NSDictionaryOfVariableBindings(lastView)]];
 }
 
 #pragma mark - Location picker

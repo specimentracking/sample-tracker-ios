@@ -79,7 +79,7 @@
         specimen.updateTime = [GSTDateUtility dateWithString:JSONObject[@"update_time"]];
         
         specimen.dateOfCollection = [GSTDateUtility dateWithShortString:JSONObject[@"sample_data"][@"date_of_collection"]];
-        specimen.dateSend = [GSTDateUtility dateWithShortString:JSONObject[@"sample_data"][@"date_sent"]];
+        specimen.dateSent = [GSTDateUtility dateWithShortString:JSONObject[@"sample_data"][@"date_sent"]];
         specimen.ddPcrFlag = [JSONObject[@"sample_data"][@"dd_pcr_flag"] isKindOfClass:[NSString class]] && [JSONObject[@"sample_data"][@"dd_pcr_flag"] isEqualToString:@"true"];
         specimen.family = JSONObject[@"sample_data"][@"family"];
         specimen.genotypeFlag = [JSONObject[@"sample_data"][@"genotype_flag"] isKindOfClass:[NSString class]] && [JSONObject[@"sample_data"][@"genotype_flag"] isEqualToString:@"true"];

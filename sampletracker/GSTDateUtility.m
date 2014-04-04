@@ -16,7 +16,7 @@
     NSDate *date = nil;
     if (dateString && ![dateString isKindOfClass:[NSNull class]]) {
         NSDateFormatter *formatter = [self currentFormatter];
-        formatter.dateFormat = @"yyyy-MM-dd'T'HH:mm:ssZZZ";
+        formatter.dateFormat = @"yyyy-MM-dd'T'HH:mm:ss.A";
         date = [formatter dateFromString:dateString];
     }
     return date;
@@ -36,7 +36,7 @@
     NSString *dateString = nil;
     if (date && ![date isKindOfClass:[NSNull class]]) {
         NSDateFormatter *formatter = [self currentFormatter];
-        formatter.dateFormat = @"yyyy-MM-dd'T'HH:mm:ssZZZ";
+        formatter.dateFormat = @"yyyy-MM-dd'T'HH:mm:ss.A";
         dateString = [formatter stringFromDate:date];
     }
     return dateString;
@@ -55,6 +55,19 @@
     return dateString;
 }
 
++ (NSString *)readableStringWithDate:(NSDate *)date {
+    NSString *dateString = nil;
+    if (date && ![date isKindOfClass:[NSNull class]]) {
+        NSDateFormatter *formatter = [self currentFormatter];
+        [formatter setFormatterBehavior:NSDateFormatterBehavior10_4];
+        formatter.dateFormat = nil;
+        [formatter setDateStyle:NSDateFormatterShortStyle];
+        [formatter setTimeStyle:NSDateFormatterNoStyle];
+        dateString = [formatter stringFromDate:date];
+    }
+    return dateString;
+}
+
 #pragma mark - Auxilliary
 
 + (NSDateFormatter *)currentFormatter {
@@ -62,22 +75,10 @@
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         formatter = [[NSDateFormatter alloc] init];
-        formatter.locale = [self currentLocale];
+        formatter.locale = [NSLocale currentLocale];
         formatter.dateFormat = @"yyyy-MM-dd'T'HH:mm:ssZZZ";
     });
     return formatter;
-}
-
-+ (NSLocale *)currentLocale  {
-    // Chooce locale according to current language
-    NSString *language = [[NSLocale preferredLanguages] objectAtIndex:0];
-    NSLocale *locale = nil;
-    if ([[language lowercaseString] hasPrefix:@"cs"] || [[language lowercaseString] hasPrefix:@"sk"]) {
-        locale = [[NSLocale alloc] initWithLocaleIdentifier:@"cs_CZ"];
-    } else {
-        locale = [[NSLocale alloc] initWithLocaleIdentifier:@"en_US"];
-    }
-    return locale;
 }
 
 @end

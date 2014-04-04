@@ -346,9 +346,9 @@
 			isa = PBXGroup;
 			children = (
 				EDA7612A18AA960C0097EF42 /* libZXingObjC-iOS.a */,
-				EDA7612C18AA960C0097EF42 /* Unit Tests iOS.octest */,
+				EDA7612C18AA960C0097EF42 /* Unit Tests iOS.xctest */,
 				EDA7613018AA960C0097EF42 /* libZXingObjC-osx.a */,
-				EDA7613218AA960C0097EF42 /* Unit Tests OS X.octest */,
+				EDA7613218AA960C0097EF42 /* Unit Tests OS X.xctest */,
 				EDA7613618AA960C0097EF42 /* ZXingObjC.framework */,
 			);
 			name = Products;
@@ -418,7 +418,7 @@
 			remoteRef = EDA7612918AA960C0097EF42 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		EDA7612C18AA960C0097EF42 /* Unit Tests iOS.octest */ = {
+		EDA7612C18AA960C0097EF42 /* Unit Tests iOS.xctest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
 			path = "Unit Tests iOS.xctest";
@@ -432,7 +432,7 @@
 			remoteRef = EDA7612F18AA960C0097EF42 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		EDA7613218AA960C0097EF42 /* Unit Tests OS X.octest */ = {
+		EDA7613218AA960C0097EF42 /* Unit Tests OS X.xctest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
 			path = "Unit Tests OS X.xctest";
